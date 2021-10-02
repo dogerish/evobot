@@ -53,7 +53,7 @@ export default {
           }
         } else {
           collector.stop();
-          reaction.message.reactions.removeAll();
+          reaction.message.reactions.removeAll().catch(console.error);
         }
         await reaction.users.remove(message.author.id);
       } catch (error) {
