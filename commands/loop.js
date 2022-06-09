@@ -13,7 +13,7 @@ export default {
     queue.loop = !queue.loop;
 
     return message
-      .reply(i18n.__mf("loop.result", { loop: queue.loop ? i18n.__("common.on") : i18n.__("common.off") }))
+      .channel.send(i18n.__mf("loop.result", { author: message.author.username, loop: queue.loop ? i18n.__("common.on") : i18n.__("common.off") }))
       .catch(console.error);
   }
 };

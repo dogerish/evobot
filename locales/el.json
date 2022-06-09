@@ -67,7 +67,7 @@
     "mutedSong": "{author} 🔇 Σίγαση μουσικής!",
     "decreasedVolume": "{author} 🔉 χαμήλωσε την ένταση, η ένταση τώρα είναι {volume}%",
     "increasedVolume": "{author} 🔊 αύξησε την ένταση, η ένταση τώρα είναι  {volume}%",
-    "loopSong": "Ο βρόγχος τώρα είναι {loop}",
+    "loopSong": "{author}, Ο βρόγχος τώρα είναι {loop}",
     "stopSong": "{author} ⏹ σταμάτησε την αναπαραγωγή!",
     "leaveChannel": "Έξοδος από το κανάλι ομιλίας...",
     "songNotFound": "Δε βρέθηκε ήχος",

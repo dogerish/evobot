@@ -67,7 +67,7 @@
     "mutedSong": "{author} 🔇 hat die Musik gemuted!",
     "decreasedVolume": "{author} 🔉 hat die Lautstärke reduziert, sie ist jetzt auf {volume}%",
     "increasedVolume": "{author} 🔊 hat die Lautstärke erhöht, sie ist jetzt auf {volume}%",
-    "loopSong": "Musikschleife ist nun auf {loop}",
+    "loopSong": "{author}, Musikschleife ist nun auf {loop}",
     "stopSong": "{author} ⏹ hat die Musik gestoppt!",
     "leaveChannel": "Verlasse den Voice-Channel...",
     "songNotFound": "Audio nicht gefunden",
