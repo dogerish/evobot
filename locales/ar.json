@@ -56,7 +56,7 @@
     "usageReply": "الاستعمال: {prefix}play <رابط يوتيوب | اسم مقطع | رابط سواندكلود>",
     "missingPermissionConnect": "لا يمكن الاتصال بقناة صوتية ، أذونات مفقودة",
     "missingPermissionSpeak": "لا يمكنني التحدث في هذه القناة الصوتية ، تأكد من أن لدي الأذونات المناسبة!",
-    "queueAdded": "تمت اضافة **{title}** الي القائمة بواسطة {author} ✅",
+    "queueAdded": "تمت اضافة **{title}** (<{url}>) الي القائمة بواسطة {author} ✅",
     "cantJoinChannel": "تعذر الانضمام إلى القناة: {error}",
     "queueEnded": "قائمة الاغاني انتهت ❌",
     "queueError": "خطأ: {error}",

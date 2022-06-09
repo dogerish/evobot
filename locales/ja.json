@@ -60,7 +60,6 @@
     "cantJoinChannel": "チャンネルに参加出来ません: {error}",
     "queueEnded": "❌ キューを最後まで再生しました。",
     "queueError": "エラー: {error}",
-    "startedPlaying": "🎶 再生中: **{title}** {url}",
     "skipSong": "{author} が ⏩ スキップしました",
     "pauseSong": "{author} が ⏸ 一時停止しました",
     "resumeSong": "{author} が ▶ 再開しました",

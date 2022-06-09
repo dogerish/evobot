@@ -60,7 +60,6 @@
     "cantJoinChannel": "Tidak dapat bergabung ke saluran: {error}",
     "queueEnded": "❌ Antrian musik berakhir.",
     "queueError": "Terjadi kesalahan: {error}",
-    "startedPlaying": "🎶 Mulai memutar: **{title}** {url}",
     "skipSong": "{author} ⏩ melewatkan lagu",
     "pauseSong": "{author} ⏸ menjeda lagu.",
     "resumeSong": "{author} ▶ melanjutkan memutar lagu!",

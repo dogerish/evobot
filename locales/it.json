@@ -60,7 +60,6 @@
     "cantJoinChannel": "Non posso connettermi al canale: {error}",
     "queueEnded": "❌ Coda di riproduzione terminata.",
     "queueError": "Errore: {error}",
-    "startedPlaying": "🎶 Iniziata riproduzione: **{title}** {url}",
     "skipSong": "{author} ⏩ ha saltato il brano",
     "pauseSong": "{author} ⏸ ha messo in pausa la riproduzione.",
     "resumeSong": "{author} ▶ ha ripreso la riproduzione!",

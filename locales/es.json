@@ -55,6 +55,7 @@
     "errorNotInSameChannel": "Tienes que estár en el mismo canal de voz que {user}",
     "usageReply": "Uso correcto: {prefix}play <URL de YouTube | Nombre del vídeo | URL de Soundcloud>",
     "missingPermissionConnect": "No se puede conectar al canal de voz, permisos insuficientes.",
+    "missingPermissionSpeak": "¡No se puede reproducir sonidos en este canal, comprueba los permisos!",
     "queueAdded": "✅ {author} ha añadido **{title}** (<{url}>) a la cola de reproducción",
     "cantJoinChannel": "No se pudo conectar al canal: {error}",
     "queueEnded": "❌ Cola de música finalizada.",

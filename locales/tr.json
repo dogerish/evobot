@@ -60,7 +60,6 @@
     "cantJoinChannel": "Kanala katılamadı: {error}",
     "queueEnded": "❌ Müzik listesi bitti.",
     "queueError": "Hata: {error}",
-    "startedPlaying": "🎶 Oynatmaya başladı: **{title}** {url}",
     "skipSong": "{author} ⏩ şarkıyı atladı",
     "pauseSong": "{author} ⏸ müziği durdurdu.",
     "resumeSong": "{author} ▶ müziği yeniden oynattı!",
