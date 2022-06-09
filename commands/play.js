@@ -68,6 +68,7 @@ export default {
 
     const queueConstruct = generateQueue(message.channel, channel);
     queueConstruct.songs.push(song);
+    message.channel.send(i18n.__mf("play.queueAdded", { title: song.title, author: message.author.username, url: song.url })).catch(console.error);
 
     message.client.queue.set(message.guild.id, queueConstruct);
 
