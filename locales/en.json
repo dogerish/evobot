@@ -13,6 +13,11 @@
     "embedTitle": "{botname} Help",
     "embedDescription": "List of all commands"
   },
+  "quit": {
+    "description": "Make the bot go offline.",
+    "notOwner": "❌ You aren't the bot owner",
+    "result": "Going offline"
+  },
   "invite": {
     "description": "Send bot invite link"
   },
