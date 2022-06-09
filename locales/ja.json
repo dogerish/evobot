@@ -31,7 +31,7 @@
     "description": "キューにある曲を移動",
     "errorNotQueue": "キューに何も入っていません。",
     "usagesReply": "使い方: {prefix}move <キュー番号>",
-    "result": "<@{author}> が **{title}** をキューの {index} 個目に移動 🚚 しました。"
+    "result": "{author} が **{title}** をキューの {index} 個目に移動 🚚 しました。"
   },
   "nowplaying": {
     "description": "再生中の曲を表示",
@@ -43,7 +43,7 @@
   "pause": {
     "description": "再生中の曲を一時停止",
     "errorNotQueue": "何も再生していません。",
-    "result": "<@{author}> が一時停止 ⏸ しました。"
+    "result": "{author} が一時停止 ⏸ しました。"
   },
   "ping": {
     "description": "この Bot の平均 ping 値を表示",
@@ -56,20 +56,19 @@
     "usageReply": "使い方: {prefix}play <YouTube URL | 名前 | Soundcloud URL>",
     "missingPermissionConnect": "ボイスチャンネルに接続出来ません、権限が不足しています",
     "missingPermissionSpeak": "このボイスチャンネルで音を発することが出来ません、権限が適切かどうか確認してください！",
-    "queueAdded": "✅ <@{author}> が **{title}** をキューに追加しました",
+    "queueAdded": "✅ が **{title}** (<{url}>) をキューに追加しました",
     "cantJoinChannel": "チャンネルに参加出来ません: {error}",
     "queueEnded": "❌ キューを最後まで再生しました。",
     "queueError": "エラー: {error}",
-    "startedPlaying": "🎶 再生中: **{title}** {url}",
-    "skipSong": "<@{author}> が ⏩ スキップしました",
-    "pauseSong": "<@{author}> が ⏸ 一時停止しました",
-    "resumeSong": "<@{author}> が ▶ 再開しました！",
-    "unmutedSong": "<@{author}> が 🔊 ミュート解除しました！",
-    "mutedSong": "<@{author}> が 🔇 ミュートしました！",
-    "decreasedVolume": "<@{author}> が 🔉 ボリュームを下げました、現在 {volume}%",
-    "increasedVolume": "<@{author}> が 🔊 ボリュームをあげました、現在 {volume}%",
-    "loopSong": "<@{author}> がループ再生を {loop} にしました",
-    "stopSong": "<@{author}> が ⏹ 停止しました！",
+    "skipSong": "{author} が ⏩ スキップしました",
+    "pauseSong": "{author} が ⏸ 一時停止しました",
+    "resumeSong": "{author} が ▶ 再開しました！",
+    "unmutedSong": "{author} が 🔊 ミュート解除しました！",
+    "mutedSong": "{author} が 🔇 ミュートしました！",
+    "decreasedVolume": "{author} が 🔉 ボリュームを下げました、現在 {volume}%",
+    "increasedVolume": "{author} が 🔊 ボリュームをあげました、現在 {volume}%",
+    "loopSong": "{author} がループ再生を {loop} にしました",
+    "stopSong": "{author} が ⏹ 停止しました！",
     "leaveChannel": "ボイスチャンネルを退出します",
     "songNotFound": "音声が見つかりません",
     "songAccessErr": "動画は年齢制限あり、非公開、または利用できません"
@@ -84,7 +83,7 @@
     "errorNotFoundPlaylist": "プレイリストが存在しません :(",
     "fetchingPlaylist": "⌛ プレイリストを取得しています...",
     "playlistCharLimit": "\nプレイリストが文字数制限を超えています...",
-    "startedPlaylist": "<@{author}> がプレイリストを再生しています",
+    "startedPlaylist": "がプレイリストを再生しています",
     "cantJoinChannel": "チャンネルに参加出来ません: {error}"
   },
   "pruning": {
@@ -104,12 +103,12 @@
     "description": "キューにある曲を削除",
     "errorNotQueue": "キューに何も入っていません。",
     "usageReply": "使い方: {prefix}remove <キュー番号>",
-    "result": "<@{author}> がキューから **{title}** を ❌ 削除しました。"
+    "result": "{author} がキューから **{title}** を ❌ 削除しました。"
   },
   "resume": {
     "description": "再生中の曲を再開",
     "errorNotQueue": "何も再生していません。",
-    "resultNotPlaying": "<@{author}> が曲を ▶ 再開しました！",
+    "resultNotPlaying": "{author} が曲を ▶ 再開しました！",
     "errorPlaying": "キューは一時停止していません。"
   },
   "search": {
@@ -123,24 +122,24 @@
   "shuffle": {
     "description": "キューをシャッフル",
     "errorNotQueue": "キューに何も入っていません。",
-    "result": "<@{author}> が 🔀 シャッフルしました"
+    "result": "{author} が 🔀 シャッフルしました"
   },
   "skip": {
     "description": "再生中の曲をスキップ",
     "errorNotQueue": "スキップする曲がありません。",
-    "result": "<@{author}> が ⏭ スキップしました"
+    "result": "{author} が ⏭ スキップしました"
   },
   "skipto": {
     "description": "指定した番号の曲をスキップ",
     "usageReply": "使い方: {prefix}{name} <キュー番号>",
     "errorNotQueue": "キューに何も入っていません。",
     "errorNotValid": "キューには {length} 曲しか入っていません！",
-    "result": "<@{author}> が {arg} 曲 ⏭ スキップしました"
+    "result": "{author} が {arg} 曲 ⏭ スキップしました"
   },
   "stop": {
     "description": "曲を停止",
     "errorNotQueue": "何も再生していません。",
-    "result": "<@{author}> が ⏹ 停止しました！"
+    "result": "{author} が ⏹ 停止しました！"
   },
   "uptime": {
     "description": "稼働時間を確認",

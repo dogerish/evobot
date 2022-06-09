@@ -8,13 +8,13 @@ export default {
   async execute(message, args) {
     if (!args.length)
       return message
-        .reply(i18n.__mf("search.usageReply", { prefix: message.client.prefix, name: module.exports.name }))
+        .channel.send(i18n.__mf("search.usageReply", { prefix: message.client.prefix, name: module.exports.name }))
         .catch(console.error);
 
-    if (message.channel.activeCollector) return message.reply(i18n.__("search.errorAlreadyCollector"));
+    if (message.channel.activeCollector) return message.channel.send(i18n.__("search.errorAlreadyCollector"));
 
     if (!message.member?.voice.channel)
-      return message.reply(i18n.__("search.errorNotChannel")).catch(console.error);
+      return message.channel.send(i18n.__("search.errorNotChannel")).catch(console.error);
 
     const search = args.join(" ");
 
@@ -61,7 +61,7 @@ export default {
     } catch (error) {
       console.error(error);
       message.channel.activeCollector = false;
-      message.reply(error.message).catch(console.error);
+      message.channel.send(error.message).catch(console.error);
     }
   }
 };

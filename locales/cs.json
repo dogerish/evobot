@@ -31,7 +31,7 @@
     "description": "Přesouvat skladby ve frontě",
     "errorNotQueue": "Není tu žádná fronta.",
     "usagesReply": "Použití: {prefix}move <číslo ve frontě>",
-    "result": "<@{author}> 🚚 přesunul **{title}** na {index}. pozici ve frontě."
+    "result": "{author} 🚚 přesunul **{title}** na {index}. pozici ve frontě."
   },
   "nowplaying": {
     "description": "Zobrazit právě hrající skladbu",
@@ -43,7 +43,7 @@
   "pause": {
     "description": "Pozastavit právě hrající hudbu",
     "errorNotQueue": "Momentálně nic nehraje.",
-    "result": "<@{author}> ⏸ pozastavil hudbu."
+    "result": "{author} ⏸ pozastavil hudbu."
   },
   "ping": {
     "description": "Zobrazit průměrný ping bota",
@@ -56,20 +56,19 @@
     "usageReply": "Použití: {prefix}play <YouTube URL | Název videa | SoundCloud URL>",
     "missingPermissionConnect": "Nelze se připojit do hlasového kanálu, chybí oprávnění",
     "missingPermissionSpeak": "V tomto hlasovém kanále nemohu mluvit, ujisti se, že mám správná oprávnění!",
-    "queueAdded": "✅ Skladba **{title}** byla přidána do fronty uživatelem <@{author}>",
+    "queueAdded": "✅ Skladba **{title}** (<{url}>) byla přidána do fronty uživatelem {author}",
     "cantJoinChannel": "Nelze se připojit do kanálu: {error}",
     "queueEnded": "❌ Hudební fronta skončila.",
     "queueError": "Chyba: {error}",
-    "startedPlaying": "🎶 Spuštěno přehrávání: **{title}** {url}",
-    "skipSong": "<@{author}> ⏩ přeskočil skladbu",
-    "pauseSong": "<@{author}> ⏸ pozastavil hudbu.",
-    "resumeSong": "<@{author}> ▶ zrušil pozastavení hudby!",
-    "unmutedSong": "<@{author}> 🔊 zrušil ztlumení hudby!",
-    "mutedSong": "<@{author}> 🔇 ztlumil hudbu!",
-    "decreasedVolume": "<@{author}> 🔉 snížil hlasitost, hlasitost je nyní {volume}%",
-    "increasedVolume": "<@{author}> 🔊 zvýšil hlasitost, hlasitost je nyní {volume}%",
-    "loopSong": "<@{author}> Opakování je nyní {loop}",
-    "stopSong": "<@{author}> ⏹ zastavil hudbu!",
+    "skipSong": "{author} ⏩ přeskočil skladbu",
+    "pauseSong": "{author} ⏸ pozastavil hudbu.",
+    "resumeSong": "{author} ▶ zrušil pozastavení hudby!",
+    "unmutedSong": "{author} 🔊 zrušil ztlumení hudby!",
+    "mutedSong": "{author} 🔇 ztlumil hudbu!",
+    "decreasedVolume": "{author} 🔉 snížil hlasitost, hlasitost je nyní {volume}%",
+    "increasedVolume": "{author} 🔊 zvýšil hlasitost, hlasitost je nyní {volume}%",
+    "loopSong": "{author} Opakování je nyní {loop}",
+    "stopSong": "{author} ⏹ zastavil hudbu!",
     "leaveChannel": "Opouštění hlasového kanálu...",
     "songNotFound": "Hudba nenalezena",
     "songAccessErr": "Video je omezeno věkem, soukromé nebo nedostupné"
@@ -84,7 +83,7 @@
     "errorNotFoundPlaylist": "Playlist nenalezen :(",
     "fetchingPlaylist": "⌛ načítání playlistu...",
     "playlistCharLimit": "\nPlaylist je větší než limit znaků...",
-    "startedPlaylist": "<@{author}> spustil playlist",
+    "startedPlaylist": "{author} spustil playlist",
     "cantJoinChannel": "Nepodařilo se připojit do kanálu: {error}"
   },
   "pruning": {
@@ -104,12 +103,12 @@
     "description": "Odebrat skladbu z fronty",
     "errorNotQueue": "Neexistuje žádná fronta.",
     "usageReply": "Použití: {prefix}remove <číslo ve frontě>",
-    "result": "<@{author}> ❌ odebral skladbu **{title}** z fronty."
+    "result": "{author} ❌ odebral skladbu **{title}** z fronty."
   },
   "resume": {
     "description": "Zrušit pozastavení právě hrající hudby",
     "errorNotQueue": "Momentálně nic nehraje.",
-    "resultNotPlaying": "<@{author}> ▶ zrušil pozastavení hudby!",
+    "resultNotPlaying": "{author} ▶ zrušil pozastavení hudby!",
     "errorPlaying": "Fronta není pozastavena."
   },
   "search": {
@@ -123,24 +122,24 @@
   "shuffle": {
     "description": "Zamíchat frontu",
     "errorNotQueue": "Neexistuje žádná fronta.",
-    "result": "<@{author}> 🔀 zamíchal frontu"
+    "result": "{author} 🔀 zamíchal frontu"
   },
   "skip": {
     "description": "Přeskočit právě hrající skladbu",
     "errorNotQueue": "Momentálně nehraje nic, co bych mohl přeskočit.",
-    "result": "<@{author}> ⏭ přeskočil skladbu"
+    "result": "{author} ⏭ přeskočil skladbu"
   },
   "skipto": {
     "description": "Přeskočit na vybrané číslo skladby ve frontě",
     "usageReply": "Použití: {prefix}{name} <číslo ve frontě>",
     "errorNotQueue": "Neexistuje žádná fronta.",
     "errorNotValid": "Fronta má délku pouze {length} skladeb!",
-    "result": "<@{author}> ⏭ přeskočil {arg} skladeb"
+    "result": "{author} ⏭ přeskočil {arg} skladeb"
   },
   "stop": {
     "description": "Zastaví hudbu",
     "errorNotQueue": "Momentálně nic nehraje.",
-    "result": "<@{author}> ⏹ zastavil hudbu!"
+    "result": "{author} ⏹ zastavil hudbu!"
   },
   "uptime": {
     "description": "Zkontrolovat dobu běhu",

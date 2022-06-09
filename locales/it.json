@@ -31,7 +31,7 @@
     "description": "Sposta il brano nella coda",
     "errorNotQueue": "Non c'è nessuna coda attiva.",
     "usagesReply": "Utilizzo: {prefix}move <Numero in Coda>",
-    "result": "<@{author}> 🚚 ha spostato **{title}** a {index} nella coda."
+    "result": "🚚 ha spostato **{title}** a {index} nella coda."
   },
   "nowplaying": {
     "description": "Mostra il brano in riproduzione",
@@ -43,7 +43,7 @@
   "pause": {
     "description": "Mette in pausa il brano attualmente in riproduzione",
     "errorNotQueue": "Non c'è niente in riproduzione.",
-    "result": "<@{author}> ⏸ ha messo in pausa il brano."
+    "result": "⏸ ha messo in pausa il brano."
   },
   "ping": {
     "description": "Mostra il ping medio del bot",
@@ -56,20 +56,19 @@
     "usageReply": "Utilizzo: {prefix}play <URL video di YouTube | Nome video | URL di Soundcloud>",
     "missingPermissionConnect": "Non posso connettermi al canale vocale, permessi mancanti",
     "missingPermissionSpeak": "Non posso parlare in questo canale vocale, assicurati di avermi dato i permessi appropriati!",
-    "queueAdded": "✅ **{title}** è stato aggiunto nella coda da <@{author}>",
+    "queueAdded": "✅ **{title}** (<{url}>) è stato aggiunto nella coda da {author}",
     "cantJoinChannel": "Non posso connettermi al canale: {error}",
     "queueEnded": "❌ Coda di riproduzione terminata.",
     "queueError": "Errore: {error}",
-    "startedPlaying": "🎶 Iniziata riproduzione: **{title}** {url}",
-    "skipSong": "<@{author}> ⏩ ha saltato il brano",
-    "pauseSong": "<@{author}> ⏸ ha messo in pausa la riproduzione.",
-    "resumeSong": "<@{author}> ▶ ha ripreso la riproduzione!",
-    "unmutedSong": "<@{author}> 🔊 ha smutato la riproduzione!",
-    "mutedSong": "<@{author}> 🔇 ha mutato la riproduzione!",
-    "decreasedVolume": "<@{author}> 🔉 ha abbassato il volume, il volume è ora al {volume}%",
-    "increasedVolume": "<@{author}> 🔊 ha aumentato il volume, il volume è ora al {volume}%",
-    "loopSong": "<@{author}> Il loop è ora {loop}",
-    "stopSong": "<@{author}> ⏹ ha fermato la riproduzione!",
+    "skipSong": "⏩ ha saltato il brano",
+    "pauseSong": "⏸ ha messo in pausa la riproduzione.",
+    "resumeSong": "▶ ha ripreso la riproduzione!",
+    "unmutedSong": "🔊 ha smutato la riproduzione!",
+    "mutedSong": "🔇 ha mutato la riproduzione!",
+    "decreasedVolume": "🔉 ha abbassato il volume, il volume è ora al {volume}%",
+    "increasedVolume": "🔊 ha aumentato il volume, il volume è ora al {volume}%",
+    "loopSong": "Il loop è ora {loop}",
+    "stopSong": "⏹ ha fermato la riproduzione!",
     "leaveChannel": "Esco dal canale vocale...",
     "songNotFound": "Brano non trovato",
     "songAccessErr": "Video is age restricted, private or unavailable"
@@ -84,7 +83,7 @@
     "errorNotFoundPlaylist": "Playlist non trovata :(",
     "fetchingPlaylist": "⌛ recupero info della playlist...",
     "playlistCharLimit": "\nPlaylist maggiore del limite di caratteri...",
-    "startedPlaylist": "<@{author}> Ha avviato una playlist",
+    "startedPlaylist": "Ha avviato una playlist",
     "cantJoinChannel": "Non posso connettermi al canale: {error}"
   },
   "pruning": {
@@ -104,12 +103,12 @@
     "description": "Rimuovi brano dalla coda",
     "errorNotQueue": "Non c'è nessuna coda attiva.",
     "usageReply": "Utilizzo: {prefix}remove <Numero in Coda>",
-    "result": "<@{author}> ❌ ha rimosso **{title}** dalla coda."
+    "result": "❌ ha rimosso **{title}** dalla coda."
   },
   "resume": {
     "description": "Riprendi la riproduzione del brano",
     "errorNotQueue": "Non c'è niente in riproduzione.",
-    "resultNotPlaying": "<@{author}> ▶ ha ripreso la riproduzione!",
+    "resultNotPlaying": "▶ ha ripreso la riproduzione!",
     "errorPlaying": "La coda non è in pausa."
   },
   "search": {
@@ -123,24 +122,24 @@
   "shuffle": {
     "description": "Coda mischiata",
     "errorNotQueue": "Non c'è nessuna coda attiva.",
-    "result": "<@{author}> 🔀 ha mischiato la coda"
+    "result": "🔀 ha mischiato la coda"
   },
   "skip": {
     "description": "Salta il brano attualmente in riproduzione",
     "errorNotQueue": "Non c'è niente che io possa saltare per te.",
-    "result": "<@{author}> ⏭ ha saltato il brano"
+    "result": "⏭ ha saltato il brano"
   },
   "skipto": {
     "description": "Passa al numero di coda selezionato",
     "usageReply": "Utilizzo: {prefix}{name} <Numero in Coda>",
     "errorNotQueue": "Non c'è nessuna coda attiva.",
     "errorNotValid": "La coda è lunga solo {length} brani!",
-    "result": "<@{author}> ⏭ ha saltato {arg} brani"
+    "result": "⏭ ha saltato {arg} brani"
   },
   "stop": {
     "description": "Ferma la riproduzione",
     "errorNotQueue": "Non c'è niente in riproduzione.",
-    "result": "<@{author}> ⏹ ha fermato la riproduzione!"
+    "result": "⏹ ha fermato la riproduzione!"
   },
   "uptime": {
     "description": "Controlla il tempo di attività",

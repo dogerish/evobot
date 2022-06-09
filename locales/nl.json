@@ -31,7 +31,7 @@
     "description": "Verplaats nummers in de wachtrij",
     "errorNotQueue": "Er is geen wachtrij.",
     "usagesReply": "Gebruik: {prefix}move <Wachtrij Nummer>",
-    "result": "<@{author}> 🚚 verplaatst **{title}** naar {index} in de wachtrij."
+    "result": "🚚 verplaatst **{title}** naar {index} in de wachtrij."
   },
   "nowplaying": {
     "description": "Toon het spelende nummer",
@@ -43,7 +43,7 @@
   "pause": {
     "description": "Pauzeer de muziek die aan het afspelen is",
     "errorNotQueue": "Er is niks aan het afspelen.",
-    "result": "<@{author}> ⏸ heeft de muziek gepauzeerd."
+    "result": "⏸ heeft de muziek gepauzeerd."
   },
   "ping": {
     "description": "Laat de gemiddelde ping van de bot zien",
@@ -56,20 +56,19 @@
     "usageReply": "Gebruik: {prefix}play <YouTube URL | Video Naam | Soundcloud URL>",
     "missingPermissionConnect": "Kan geen verbinding maken met voice channel, missing permissions",
     "missingPermissionSpeak": "Ik kan niet spreken in de voice channel, Zorg ervoor dat ik de juiste permissions heb!",
-    "queueAdded": "✅ **{title}** is toegevoegd aan de wachtrij door <@{author}>",
+    "queueAdded": "✅ **{title}** (<{url}>) is toegevoegd aan de wachtrij door {author}",
     "cantJoinChannel": "Ik kon de channel niet betreden: {error}",
     "queueEnded": "❌ Muziek wachtrij afgelopen.",
     "queueError": "Foutmelding: {error}",
-    "startedPlaying": "🎶 Gestart met afspelen: **{title}** {url}",
-    "skipSong": "<@{author}> ⏩ skipte het liedje",
-    "pauseSong": "<@{author}> ⏸ pauzeerde de muziek!.",
-    "resumeSong": "<@{author}> ▶ hervatte de muziek!",
-    "unmutedSong": "<@{author}> 🔊 unmuted de muziek!",
-    "mutedSong": "<@{author}> 🔇 muted de muziek!",
-    "decreasedVolume": "<@{author}> 🔉 verlaagde het volume, het volume is nu {volume}%",
-    "increasedVolume": "<@{author}> 🔊 verhoogde het volume, het volume is nu {volume}%",
-    "loopSong": "<@{author}> Herhaling is nu {loop}",
-    "stopSong": "<@{author}> ⏹ stopte de muziek!",
+    "skipSong": "⏩ skipte het liedje",
+    "pauseSong": "⏸ pauzeerde de muziek!.",
+    "resumeSong": "▶ hervatte de muziek!",
+    "unmutedSong": "🔊 unmuted de muziek!",
+    "mutedSong": "🔇 muted de muziek!",
+    "decreasedVolume": "🔉 verlaagde het volume, het volume is nu {volume}%",
+    "increasedVolume": "🔊 verhoogde het volume, het volume is nu {volume}%",
+    "loopSong": "Herhaling is nu {loop}",
+    "stopSong": "⏹ stopte de muziek!",
     "leaveChannel": "Voice channel verlaten...",
     "songNotFound": "Audio Not Found",
     "songAccessErr": "Video is age restricted, private or unavailable"
@@ -84,7 +83,7 @@
     "errorNotFoundPlaylist": "Playlist niet gevonden :(",
     "fetchingPlaylist": "⌛ playlist aan het ophalen...",
     "playlistCharLimit": "\nAfspeellijst groter dan tekenlimiet...",
-    "startedPlaylist": "<@{author}> Starte een playlist",
+    "startedPlaylist": "Starte een playlist",
     "cantJoinChannel": "Ik kon de channel niet betreden: {error}"
   },
   "pruning": {
@@ -104,12 +103,12 @@
     "description": "Verwijder liedje van de wachrij",
     "errorNotQueue": "Er is geen wachtrij.",
     "usageReply": "Gebruik: {prefix}remove <Wachtrij nummer>",
-    "result": "<@{author}> ❌ heeft **{title}** verwijderd van de wachtrij."
+    "result": "❌ heeft **{title}** verwijderd van de wachtrij."
   },
   "resume": {
     "description": "Hervat de muziek die momenteel wordt afgespeeld",
     "errorNotQueue": "Er speelt niets af.",
-    "resultNotPlaying": "<@{author}> ▶ hervatte de muziek!",
+    "resultNotPlaying": "▶ hervatte de muziek!",
     "errorPlaying": "De wachtrij is niet gepauzeerd."
   },
   "search": {
@@ -123,24 +122,24 @@
   "shuffle": {
     "description": "Wachtrij in willekeurige volgorde",
     "errorNotQueue": "Er is geen wachtrij.",
-    "result": "<@{author}> 🔀 de wachtrij is in een willekeurige volgorde geplaatst."
+    "result": "🔀 de wachtrij is in een willekeurige volgorde geplaatst."
   },
   "skip": {
     "description": "Sla het huidige nummer over.",
     "errorNotQueue": "Er is niks aan het afspelen dat ik kan overslaan.",
-    "result": "<@{author}> ⏭ Sloeg het huidige nummer over"
+    "result": "⏭ Sloeg het huidige nummer over"
   },
   "skipto": {
     "description": "Ga naar het geselecteerde wachtrijnummer",
     "usageReply": "Gebruik: {prefix}{name} <Wachtrij Nummer>",
     "errorNotQueue": "Er is geen wachtrij.",
     "errorNotValid": "De wachtrij is {length} liedjes lang!",
-    "result": "<@{author}> ⏭ sloeg {arg} liedjes over!"
+    "result": "⏭ sloeg {arg} liedjes over!"
   },
   "stop": {
     "description": "Stopt de muziek",
     "errorNotQueue": "Er is niks aan het afspelen.",
-    "result": "<@{author}> ⏹ stopte de muziek!"
+    "result": "⏹ stopte de muziek!"
   },
   "uptime": {
     "description": "Controleer de uptime",

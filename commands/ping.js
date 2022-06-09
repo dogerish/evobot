@@ -6,7 +6,7 @@ export default {
   description: i18n.__("ping.description"),
   execute(message) {
     message
-      .reply(i18n.__mf("ping.result", { ping: Math.round(message.client.ws.ping) }))
+      .channel.send(i18n.__mf("ping.result", { ping: Math.round(message.client.ws.ping) }))
       .catch(console.error);
   }
 };

@@ -31,7 +31,7 @@
     "description": "Verschiebe Songs in der Queue",
     "errorNotQueue": "Es gibt keine Queue.",
     "usagesReply": "Nutzung: {prefix}move <Queue Number>",
-    "result": "<@{author}> 🚚 verschiebte **{title}** zu {index} in der Queue."
+    "result": "{author} 🚚 verschiebte **{title}** zu {index} in der Queue."
   },
   "nowplaying": {
     "description": "Zeigt den jetzigen Song an",
@@ -43,7 +43,7 @@
   "pause": {
     "description": "Pausiere den jetzigen Song",
     "errorNotQueue": "Es wird gerade nichts gespielt.",
-    "result": "<@{author}> ⏸ pausierte den Song."
+    "result": "{author} ⏸ pausierte den Song."
   },
   "ping": {
     "description": "Zeigt den durchschnittlichen Ping vom Bot an",
@@ -56,20 +56,19 @@
     "usageReply": "Nutzung: {prefix}play <YouTube URL | Video Name | Soundcloud URL>",
     "missingPermissionConnect": "Ich kann deinem Voice-Channel nicht joinen, stelle sicher, dass ich die Berechtigung dazu habe!",
     "missingPermissionSpeak": "Ich kann deinem Voice-Channel nicht sprechen, stelle sicher, dass ich die Berechtigung dazu habe!",
-    "queueAdded": "✅ **{title}** wurde von <@{author}> der Queue hinzugefügt",
+    "queueAdded": "✅ **{title}** (<{url}>) wurde von der Queue hinzugefügt",
     "cantJoinChannel": "Konnte dem Channel nicht joinen, Fehlercode: {error}",
     "queueEnded": "❌ Music-Queue beended.",
     "queueError": "Error: {error}",
-    "startedPlaying": "🎶 Spiele jetzt: **{title}** {url}",
-    "skipSong": "<@{author}> ⏩ hat den Song übersprungen.",
-    "pauseSong": "<@{author}> ⏸ hat die Musik pausiert.",
-    "resumeSong": "<@{author}> ▶ hat die Musik fortgesetzt!",
-    "unmutedSong": "<@{author}> 🔊 hat die Musik unmuted!",
-    "mutedSong": "<@{author}> 🔇 hat die Musik gemuted!",
-    "decreasedVolume": "<@{author}> 🔉 hat die Lautstärke reduziert, sie ist jetzt auf {volume}%",
-    "increasedVolume": "<@{author}> 🔊 hat die Lautstärke erhöht, sie ist jetzt auf {volume}%",
-    "loopSong": "<@{author}> Musikschleife ist nun auf {loop}",
-    "stopSong": "<@{author}> ⏹ hat die Musik gestoppt!",
+    "skipSong": "{author} ⏩ hat den Song übersprungen.",
+    "pauseSong": "{author} ⏸ hat die Musik pausiert.",
+    "resumeSong": "{author} ▶ hat die Musik fortgesetzt!",
+    "unmutedSong": "{author} 🔊 hat die Musik unmuted!",
+    "mutedSong": "{author} 🔇 hat die Musik gemuted!",
+    "decreasedVolume": "{author} 🔉 hat die Lautstärke reduziert, sie ist jetzt auf {volume}%",
+    "increasedVolume": "{author} 🔊 hat die Lautstärke erhöht, sie ist jetzt auf {volume}%",
+    "loopSong": "Musikschleife ist nun auf {loop}",
+    "stopSong": "{author} ⏹ hat die Musik gestoppt!",
     "leaveChannel": "Verlasse den Voice-Channel...",
     "songNotFound": "Audio nicht gefunden",
     "songAccessErr": "Das Video ist altersbeschränkt, privat oder nicht verfügbar"
@@ -84,7 +83,7 @@
     "errorNotFoundPlaylist": "Playlist nicht gefunden :(",
     "fetchingPlaylist": "⌛ Abrufen der Playlist...",
     "playlistCharLimit": "\nPlaylist ist größer als das Limit...",
-    "startedPlaylist": "<@{author}> hat eine Playlist gestartet",
+    "startedPlaylist": "{author} hat eine Playlist gestartet",
     "cantJoinChannel": "Konnte den Voice-Channel nicht joinen, Fehler: {error}"
   },
   "pruning": {
@@ -104,12 +103,12 @@
     "description": "Entfernen Sie das Lied aus der Queue",
     "errorNotQueue": "Es gibt keine Queue.",
     "usageReply": "Nutzung: {prefix}remove <Queue Number>",
-    "result": "<@{author}> ❌ hat **{title}** aus der Queue entfernt."
+    "result": "{author} ❌ hat **{title}** aus der Queue entfernt."
   },
   "resume": {
     "description": "Setzte die Musik fort",
     "errorNotQueue": "Es wird gerade nichts gespielt.",
-    "resultNotPlaying": "<@{author}> ▶ hat die Musik fortgesetzt!",
+    "resultNotPlaying": "{author} ▶ hat die Musik fortgesetzt!",
     "errorPlaying": "Die Queue ist nicht pausiert."
   },
   "search": {
@@ -123,24 +122,24 @@
   "shuffle": {
     "description": "Mischte die Queue",
     "errorNotQueue": "Es gibt keine Queue.",
-    "result": "<@{author}> 🔀 hat die Queue gemischt"
+    "result": "{author} 🔀 hat die Queue gemischt"
   },
   "skip": {
     "description": "Überspringe den jetzigen Song",
     "errorNotQueue": "Es wird gerade nichts gespielt that I could skip for you.",
-    "result": "<@{author}> ⏭ hat den Song übersprungen"
+    "result": "{author} ⏭ hat den Song übersprungen"
   },
   "skipto": {
     "description": "Überspringe eine ausgewählte Menge von Songs",
     "usageReply": "Nutzung: {prefix}{name} <Queue Number>",
     "errorNotQueue": "Es gibt keine Queue.",
     "errorNotValid": "Die Queue ist nur {length} Songs lang!",
-    "result": "<@{author}> ⏭ hat {arg} Songs übersprungen"
+    "result": "{author} ⏭ hat {arg} Songs übersprungen"
   },
   "stop": {
     "description": "Stoppe die Musik",
     "errorNotQueue": "Es wird gerade nichts gespielt.",
-    "result": "<@{author}> ⏹ hat die Musik gestoppt!"
+    "result": "{author} ⏹ hat die Musik gestoppt!"
   },
   "uptime": {
     "description": "Checke die Uptime vom Bot",

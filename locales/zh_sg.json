@@ -31,7 +31,7 @@
     "description": "移动歌曲到队列的其他位置",
     "errorNotQueue": "没有队列",
     "usagesReply": "用法: {prefix}move <歌曲队列编号>",
-    "result": "<@{author}> 🚚 从音乐队列中移动 **{title}** 至 {index}"
+    "result": "🚚 从音乐队列中移动 **{title}** 至 {index}"
   },
   "nowplaying": {
     "description": "显示现在播放什麽",
@@ -43,7 +43,7 @@
   "pause": {
     "description": "暂停当前歌曲",
     "errorNotQueue": "现在没有任何歌曲正在播放",
-    "result": "<@{author}> ⏸ 暂停了歌曲"
+    "result": "⏸ 暂停了歌曲"
   },
   "ping": {
     "description": "查看机器人延迟平均值",
@@ -56,20 +56,19 @@
     "usageReply": "Usage: {prefix}play <YouTube 网址 | 影片名称 | Soundcloud 网址>",
     "missingPermissionConnect": "无法连结至语音频道，没有权限",
     "missingPermissionSpeak": "我无法在语音频道裡说话，请确定我有相关的权限!",
-    "queueAdded": "✅ **{title}** 已经被 <@{author}> 加入音乐队列",
+    "queueAdded": "✅ **{title}** (<{url}>) 已经被 加入音乐队列",
     "cantJoinChannel": "无法加入语音频道: {error}",
     "queueEnded": "❌ 音乐队列完结",
     "queueError": "错误: {error}",
-    "startedPlaying": "🎶 开始播放: **{title}** {url}",
-    "skipSong": "<@{author}> ⏩ 跳过了歌曲",
-    "pauseSong": "<@{author}> ⏸ 暂停了歌曲 music.",
-    "resumeSong": "<@{author}> ▶ 恢復了音乐!",
-    "unmutedSong": "<@{author}> 🔊 解除静音了音乐!",
-    "mutedSong": "<@{author}> 🔇 静音了音乐!",
-    "decreasedVolume": "<@{author}> 🔉 降低了音量, 目前音量为 {volume}%",
-    "increasedVolume": "<@{author}> 🔊 增加了音量, 目前音量为 {volume}%",
-    "loopSong": "<@{author}> 重複播放目前是 {loop}",
-    "stopSong": "<@{author}> ⏹ 停止了歌曲!",
+    "skipSong": "⏩ 跳过了歌曲",
+    "pauseSong": "⏸ 暂停了歌曲 music.",
+    "resumeSong": "▶ 恢復了音乐!",
+    "unmutedSong": "🔊 解除静音了音乐!",
+    "mutedSong": "🔇 静音了音乐!",
+    "decreasedVolume": "🔉 降低了音量, 目前音量为 {volume}%",
+    "increasedVolume": "🔊 增加了音量, 目前音量为 {volume}%",
+    "loopSong": "重複播放目前是 {loop}",
+    "stopSong": "⏹ 停止了歌曲!",
     "leaveChannel": "正在离开语音频道...",
     "songNotFound": "没有找到曲目",
     "songAccessErr": "视频有年龄限制、私人或不可用"
@@ -84,7 +83,7 @@
     "errorNotFoundPlaylist": "没有找到播放清单 :(",
     "fetchingPlaylist": "⌛ 正在取得播放清单...",
     "playlistCharLimit": "\n播放清单大于限制的歌曲数目...",
-    "startedPlaylist": "<@{author}> 开始播放播放清单",
+    "startedPlaylist": "开始播放播放清单",
     "cantJoinChannel": "无法加入语音频道: {error}"
   },
   "pruning": {
@@ -104,12 +103,12 @@
     "description": "从音乐队列移除歌曲",
     "errorNotQueue": "现在没有任何歌曲正在播放",
     "usageReply": "用法: {prefix}remove <歌曲队列编号>",
-    "result": "<@{author}> ❌ 从音乐队列移除了 **{title}**"
+    "result": "❌ 从音乐队列移除了 **{title}**"
   },
   "resume": {
     "description": "恢復播放音乐",
     "errorNotQueue": "现在没有任何歌曲正在播放",
-    "resultNotPlaying": "<@{author}> ▶ 恢復了音乐!",
+    "resultNotPlaying": "▶ 恢復了音乐!",
     "errorPlaying": "音乐队列没有被暂停"
   },
   "search": {
@@ -123,24 +122,24 @@
   "shuffle": {
     "description": "随机排序音乐队列",
     "errorNotQueue": "现在没有任何歌曲正在播放",
-    "result": "<@{author}> 🔀 随机排序了音乐队列"
+    "result": "🔀 随机排序了音乐队列"
   },
   "skip": {
     "description": "跳过当前歌曲",
     "errorNotQueue": "现在没有任何歌曲正在播放",
-    "result": "<@{author}> ⏭ 跳过了歌曲"
+    "result": "⏭ 跳过了歌曲"
   },
   "skipto": {
     "description": "跳到指定的歌曲",
     "usageReply": "用法: {prefix}{name} <歌曲队列编号>",
     "errorNotQueue": "现在没有任何歌曲正在播放",
     "errorNotValid": "音乐队列只有 {length} 个歌曲!",
-    "result": "<@{author}> ⏭ 跳过了 {arg} 歌曲"
+    "result": "⏭ 跳过了 {arg} 歌曲"
   },
   "stop": {
     "description": "停止音乐队列",
     "errorNotQueue": "现在没有任何歌曲正在播放",
-    "result": "<@{author}> ⏹ 停止了队列!"
+    "result": "⏹ 停止了队列!"
   },
   "uptime": {
     "description": "查看机器人上线时间",

@@ -31,7 +31,7 @@
     "description": "Memindahkan lagu ke dalam antrian",
     "errorNotQueue": "Tidak ada antrian.",
     "usagesReply": "Penggunaan: {prefix}move <Nomor Antrian>",
-    "result": "<@{author}> 🚚 memindahkan **{title}** ke {index} untuk masuk ke dalam antrian."
+    "result": "{author} 🚚 memindahkan **{title}** ke {index} untuk masuk ke dalam antrian."
   },
   "nowplaying": {
     "description": "Menampilkan lagu yang sedang diputar",
@@ -43,7 +43,7 @@
   "pause": {
     "description": "Menjeda musik yang sedang diputar",
     "errorNotQueue": "Tidak ada musik yang dimainkan.",
-    "result": "<@{author}> ⏸ Menjeda musik."
+    "result": "⏸ Menjeda musik."
   },
   "ping": {
     "description": "Menampilkan ping rata-rata bot",
@@ -56,20 +56,19 @@
     "usageReply": "Penggunaan: {prefix}play <YouTube URL | Nama Video | Soundcloud URL>",
     "missingPermissionConnect": "Tidak dapat terhubung ke saluran suara, karena tidak diberikan izin",
     "missingPermissionSpeak": "Saya tidak dapat berbicara di saluran suara ini, pastikan saya sudah diberikan izin!",
-    "queueAdded": "✅ **{title}** telah ditambahkan ke antrian oleh <@{author}>",
+    "queueAdded": "✅ **{title}** (<{url}>) telah ditambahkan ke antrian oleh {author}",
     "cantJoinChannel": "Tidak dapat bergabung ke saluran: {error}",
     "queueEnded": "❌ Antrian musik berakhir.",
     "queueError": "Terjadi kesalahan: {error}",
-    "startedPlaying": "🎶 Mulai memutar: **{title}** {url}",
-    "skipSong": "<@{author}> ⏩ melewatkan lagu",
-    "pauseSong": "<@{author}> ⏸ menjeda lagu.",
-    "resumeSong": "<@{author}> ▶ melanjutkan memutar lagu!",
-    "unmutedSong": "<@{author}> 🔊 mengaktifkan suara musik!",
-    "mutedSong": "<@{author}> 🔇 meredam suara musik!",
-    "decreasedVolume": "<@{author}> 🔉 menurunkan volume, volume lagu sekarang {volume}%",
-    "increasedVolume": "<@{author}> 🔊 meningkatkan volume, volume lagu sekarang {volume}%",
-    "loopSong": "<@{author}> Memutar ulang lagu {loop}",
-    "stopSong": "<@{author}> ⏹ Menghentikan musik!",
+    "skipSong": "⏩ melewatkan lagu",
+    "pauseSong": "⏸ menjeda lagu.",
+    "resumeSong": "▶ melanjutkan memutar lagu!",
+    "unmutedSong": "🔊 mengaktifkan suara musik!",
+    "mutedSong": "🔇 meredam suara musik!",
+    "decreasedVolume": "🔉 menurunkan volume, volume lagu sekarang {volume}%",
+    "increasedVolume": "🔊 meningkatkan volume, volume lagu sekarang {volume}%",
+    "loopSong": "Memutar ulang lagu {loop}",
+    "stopSong": "⏹ Menghentikan musik!",
     "leaveChannel": "Keluar dari saluran suara...",
     "songNotFound": "Audio Tidak Ditemukan",
     "songAccessErr": "Video dibatasi usia, pribadi atau tidak tersedia"
@@ -84,7 +83,7 @@
     "errorNotFoundPlaylist": "Playlist tidak ditemukan :(",
     "fetchingPlaylist": "⌛ mengambil playlist...",
     "playlistCharLimit": "\nPlaylist melebihi dari batas karakter...",
-    "startedPlaylist": "<@{author}> Memulai playlist musik",
+    "startedPlaylist": "Memulai playlist musik",
     "cantJoinChannel": "Tidak dapat bergabung ke saluran: {error}"
   },
   "pruning": {
@@ -104,12 +103,12 @@
     "description": "Menghapus lagu dari antrian",
     "errorNotQueue": "Tidak ada antrian.",
     "usageReply": "Penggunaan: {prefix}remove <Nomor Antrian>",
-    "result": "<@{author}> ❌ menghapus **{title}** dari antrian lagu."
+    "result": "❌ menghapus **{title}** dari antrian lagu."
   },
   "resume": {
     "description": "Melanjutkan memutar musik saat ini",
     "errorNotQueue": "Tidak ada musik yang dimainkan.",
-    "resultNotPlaying": "<@{author}> ▶ melanjutkan memutar musik!",
+    "resultNotPlaying": "▶ melanjutkan memutar musik!",
     "errorPlaying": "Antrian tidak dijeda."
   },
   "search": {
@@ -123,24 +122,24 @@
   "shuffle": {
     "description": "Mengacak antrian musik",
     "errorNotQueue": "Tidak ada antrian.",
-    "result": "<@{author}> 🔀 telah mengacak antrian"
+    "result": "🔀 telah mengacak antrian"
   },
   "skip": {
     "description": "Melewati lagu yang sedang diputar",
     "errorNotQueue": "Tidak ada musik yang sedang diputar untuk di lewati.",
-    "result": "<@{author}> ⏭ telah melewatkan lagu"
+    "result": "⏭ telah melewatkan lagu"
   },
   "skipto": {
     "description": "Lewati ke nomor antrian yang dipilih",
     "usageReply": "Penggunaan: {prefix}{name} <Nomor Antrian>",
     "errorNotQueue": "Tidak ada antrian.",
     "errorNotValid": "Hanya terdapat {length} antrian lagu!",
-    "result": "<@{author}> ⏭ telah melewatkan {arg} lagu"
+    "result": "⏭ telah melewatkan {arg} lagu"
   },
   "stop": {
     "description": "Menghentikan pemutaran musik",
     "errorNotQueue": "Tidak ada musik yang dimainkan.",
-    "result": "<@{author}> ⏹ telah menghentikan musik!"
+    "result": "⏹ telah menghentikan musik!"
   },
   "uptime": {
     "description": "Melihat waktu aktif (Uptime)",

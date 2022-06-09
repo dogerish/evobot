@@ -8,7 +8,7 @@ export default {
   execute(message, args) {
     if (!args.length || isNaN(args[0]))
       return message
-        .reply(i18n.__mf("skipto.usageReply", { prefix: message.client.prefix, name: module.exports.name }))
+        .channel.send(i18n.__mf("skipto.usageReply", { prefix: message.client.prefix, name: module.exports.name }))
         .catch(console.error);
 
     const queue = message.client.queue.get(message.guild.id);
@@ -19,7 +19,7 @@ export default {
 
     if (args[0] > queue.songs.length)
       return message
-        .reply(i18n.__mf("skipto.errorNotValid", { length: queue.songs.length }))
+        .channel.send(i18n.__mf("skipto.errorNotValid", { length: queue.songs.length }))
         .catch(console.error);
 
     if (queue.loop) {
@@ -33,7 +33,7 @@ export default {
     queue.player.stop();
 
     queue.textChannel
-      .send(i18n.__mf("skipto.result", { author: message.author, arg: args[0] - 1 }))
+      .send(i18n.__mf("skipto.result", { author: message.author.username, arg: args[0] - 1 }))
       .catch(console.error);
   }
 };

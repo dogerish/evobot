@@ -20,17 +20,15 @@ export default {
     if (!channel) return message.reply(i18n.__("clip.errorNotChannel")).catch(console.error);
 
     const queue = message.client.queue.get(message.guild.id);
-    if (queue) return message.reply(i18n.__("clip.errorQueue"));
-
+    if (queue) return message.channel.send(i18n.__("clip.errorQueue"));
     if (!args.length)
       return message
-        .reply(i18n.__mf("clip.usagesReply", { prefix: message.client.prefix }))
+        .channel.send(i18n.__mf("clip.usagesReply", { prefix: message.client.prefix }))
         .catch(console.error);
 
     if (args[0].includes(".mp3")) args[0] = args[0].replace(".mp3", "");
-
     if (!existsSync(`./sounds/${args[0]}.mp3`))
-      return message.reply(i18n.__("common.errorCommand")).catch(console.error);
+      return message.channel.send(i18n.__("common.errorCommand")).catch(console.error);
 
     const queueConstruct = generateQueue(message.channel, channel);
 
@@ -60,10 +58,6 @@ export default {
       await entersState(queueConstruct.connection, VoiceConnectionStatus.Ready, 30e3);
 
       queueConstruct.connection.subscribe(queueConstruct.player);
-
-      await queueConstruct.textChannel.send(
-        i18n.__mf("play.startedPlaying", { title: `${args[0]}.mp3`, url: "" })
-      );
     } catch (error) {
       console.error(error.message);
       return message.reply("error");

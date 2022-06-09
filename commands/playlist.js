@@ -16,14 +16,14 @@ export default {
 
     if (!args.length)
       return message
-        .reply(i18n.__mf("playlist.usagesReply", { prefix: message.client.prefix }))
+        .channel.send(i18n.__mf("playlist.usagesReply", { prefix: message.client.prefix }))
         .catch(console.error);
 
-    if (!channel) return message.reply(i18n.__("playlist.errorNotChannel")).catch(console.error);
+    if (!channel) return message.channel.send(i18n.__("playlist.errorNotChannel")).catch(console.error);
 
     if (queue && channel.id !== queue.channel.id)
       return message
-        .reply(i18n.__mf("play.errorNotInSameChannel", { user: message.client.user.username }))
+        .channel.send(i18n.__mf("play.errorNotInSameChannel", { user: message.client.user.username }))
         .catch(console.error);
 
     const { playlist, videos } = await getPlaylist({ message, args });
@@ -51,8 +51,8 @@ export default {
         playlistEmbed.description.substr(0, 2007) + i18n.__("playlist.playlistCharLimit");
 
     message
-      .reply({
-        content: i18n.__mf("playlist.startedPlaylist", { author: message.author }),
+      .channel.send({
+        content: i18n.__mf("playlist.startedPlaylist", { author: message.author.username }),
         embeds: [playlistEmbed]
       })
       .catch(console.error);

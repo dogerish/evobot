@@ -31,7 +31,7 @@
     "description": "Di chuyển bài hát đến vị trí chỉ định",
     "errorNotQueue": "Không có hàng đợi nào đang hoạt động.",
     "usagesReply": "Cách sử dụng: {prefix}move <thứ tự trong hàng đợi>",
-    "result": "<@{author}> 🚚 đã di chuyển **{title}** đến vị trí {index} trong hàng đợi."
+    "result": "🚚 đã di chuyển **{title}** đến vị trí {index} trong hàng đợi."
   },
   "nowplaying": {
     "description": "Hiển thị bài hát đang phát",
@@ -43,7 +43,7 @@
   "pause": {
     "description": "Tạm dừng phát nhạc",
     "errorNotQueue": "Không có bài hát nào đang phát.",
-    "result": "<@{author}> ⏸ đã tạm dừng phát nhạc."
+    "result": "⏸ đã tạm dừng phát nhạc."
   },
   "ping": {
     "description": "Hiển thị thời gian phản hồi trung bình của bot",
@@ -56,20 +56,19 @@
     "usageReply": "Cách sử dụng: {prefix}play <Link YouTube | Tên Video | Link Soundcloud>",
     "missingPermissionConnect": "Không thể kết nối đến kênh thoại, không có đủ quyền hạn",
     "missingPermissionSpeak": "Không thể phát nhạc vì không có quyền nói!",
-    "queueAdded": "✅ **{title}** đã được thêm vào hàng đợi bởi <@{author}>",
+    "queueAdded": "✅ **{title}** (<{url}>) đã được thêm vào hàng đợi bởi {author}",
     "cantJoinChannel": "Không thể kết nối đến kênh thoại: {error}",
     "queueEnded": "❌ Đã phát hết nhạc trong hàng đợi.",
     "queueError": "Lỗi: {error}",
-    "startedPlaying": "🎶 Bắt đầu phát: **{title}** {url}",
-    "skipSong": "<@{author}> ⏩ đã bỏ qua bài hát đang phát",
-    "pauseSong": "<@{author}> ⏸ đã tạm dừng phát nhạc!",
-    "resumeSong": "<@{author}> ▶ đã tiếp tục phát nhạc!",
-    "unmutedSong": "<@{author}> 🔊 đã bỏ tắt tiếng bài hát!",
-    "mutedSong": "<@{author}> 🔇 đã tắt tiếng bài hát!",
-    "decreasedVolume": "<@{author}> 🔉 đã giảm âm lượng, âm lượng hiện tại là {volume}%",
-    "increasedVolume": "<@{author}> 🔊 đã tăng âm lượng, âm lượng hiện tại là {volume}%",
-    "loopSong": "<@{author}> chế độ lặp lại hiện đang {loop}",
-    "stopSong": "<@{author}> ⏹ đã dừng phát nhạc!",
+    "skipSong": "⏩ đã bỏ qua bài hát đang phát",
+    "pauseSong": "⏸ đã tạm dừng phát nhạc!",
+    "resumeSong": "▶ đã tiếp tục phát nhạc!",
+    "unmutedSong": "🔊 đã bỏ tắt tiếng bài hát!",
+    "mutedSong": "🔇 đã tắt tiếng bài hát!",
+    "decreasedVolume": "🔉 đã giảm âm lượng, âm lượng hiện tại là {volume}%",
+    "increasedVolume": "🔊 đã tăng âm lượng, âm lượng hiện tại là {volume}%",
+    "loopSong": "chế độ lặp lại hiện đang {loop}",
+    "stopSong": "⏹ đã dừng phát nhạc!",
     "leaveChannel": "Đang rời khỏi kênh thoại...",
     "songNotFound": "Không thể tìm thấy đoạn âm thanh",
     "songAccessErr": "Video bị giới hạn độ tuổi, ở chế độ riêng tư hoặc không khả dụng!"
@@ -84,7 +83,7 @@
     "errorNotFoundPlaylist": "Không thể tìm thấy danh sách nhạc :(",
     "fetchingPlaylist": "⌛ đang tìm nạp danh sách nhạc...",
     "playlistCharLimit": "\nDanh sách nhạc lớn hơn giới hạn từ có thể gửi trong một tin nhắn...",
-    "startedPlaylist": "<@{author}> Bắt đầu phát danh sách nhạc",
+    "startedPlaylist": "Bắt đầu phát danh sách nhạc",
     "cantJoinChannel": "Không thể tham gia kênh thoại: {error}"
   },
   "pruning": {
@@ -104,12 +103,12 @@
     "description": "Loại bỏ bài hát khỏi hàng đợi",
     "errorNotQueue": "Không có hàng đợi nào đang hoạt động.",
     "usageReply": "Cách sử dụng: {prefix}remove <số thứ tự bài hát trong hàng đợi>",
-    "result": "<@{author}> ❌ đã xóa **{title}** khỏi hàng đợi."
+    "result": "❌ đã xóa **{title}** khỏi hàng đợi."
   },
   "resume": {
     "description": "Tiếp tục phát bài hát hiện đang bị tạm dừng",
     "errorNotQueue": "Không có bài hát nào đang phát.",
-    "resultNotPlaying": "<@{author}> ▶ đã tiếp tục phát nhạc!",
+    "resultNotPlaying": "▶ đã tiếp tục phát nhạc!",
     "errorPlaying": "Bài hát trong hàng đợi hiện đang không bị tạm dừng."
   },
   "search": {
@@ -123,24 +122,24 @@
   "shuffle": {
     "description": "Đảo hàng đợi",
     "errorNotQueue": "Không có hàng đợi nào đang hoạt động.",
-    "result": "<@{author}> 🔀 đã đảo hàng đợi"
+    "result": "🔀 đã đảo hàng đợi"
   },
   "skip": {
     "description": "Bỏ qua bài hát đang phát",
     "errorNotQueue": "Không có bài hát nào đang phát nào.",
-    "result": "<@{author}> ⏭ bỏ qua bài hát"
+    "result": "⏭ bỏ qua bài hát"
   },
   "skipto": {
     "description": "Bỏ qua tất cả bài hát và phát bài hát ở vị trí đã chọn",
     "usageReply": "Cách sử dụng: {prefix}{name} <số thứ tự bài hát trong hàng đợi>",
     "errorNotQueue": "Không có bài hát nào trong hàng đợi.",
     "errorNotValid": "Hiện chỉ có {length} bài hát trong hàng đợi!",
-    "result": "<@{author}> ⏭ đã chuyển đến bài hát ở vị trí {arg}."
+    "result": "⏭ đã chuyển đến bài hát ở vị trí {arg}."
   },
   "stop": {
     "description": "Dừng phát nhạc.",
     "errorNotQueue": "Hiện tại không có bài hát nào đang phát.",
-    "result": "<@{author}> ⏹ đã dừng phát nhạc!"
+    "result": "⏹ đã dừng phát nhạc!"
   },
   "volume": {
     "description": "Điều chỉnh âm lượng của bài hát đang phát.",

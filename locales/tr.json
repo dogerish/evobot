@@ -31,7 +31,7 @@
     "description": "Şarkıyı sırada taşı",
     "errorNotQueue": "Liste bulunamadı.",
     "usagesReply": "Kullanım: {prefix} taşı <Liste numarası>",
-    "result": "<@{author}> 🚚  **{title}** klibini {index}.sıraya taşıdı."
+    "result": "🚚  **{title}** klibini {index}.sıraya taşıdı."
   },
   "nowplaying": {
     "description": "Şimdi çalan şarkıyı göster",
@@ -43,7 +43,7 @@
   "pause": {
     "description": "Oynatılan klibi durdur.",
     "errorNotQueue": "Hiçbir şey oynatılmıyor.",
-    "result": "<@{author}> ⏸ müziği durdurdu."
+    "result": "⏸ müziği durdurdu."
   },
   "ping": {
     "description": "Bot ping testi",
@@ -56,20 +56,19 @@
     "usageReply": "Kullanım: {prefix}oynat <YouTube URL | Video İsmi | Soundcloud URL>",
     "missingPermissionConnect": "Kanala katılınamadı,gerekli izinler yok.",
     "missingPermissionSpeak": "Bu ses kanalında konuşamıyorum, uygun izinlere sahip olduğumdan emin olun!",
-    "queueAdded": "✅ **{title}** <@{author}> tarafından kuyruğa eklendi.",
+    "queueAdded": "✅ **{title}** (<{url}>) tarafından kuyruğa eklendi.",
     "cantJoinChannel": "Kanala katılamadı: {error}",
     "queueEnded": "❌ Müzik listesi bitti.",
     "queueError": "Hata: {error}",
-    "startedPlaying": "🎶 Oynatmaya başladı: **{title}** {url}",
-    "skipSong": "<@{author}> ⏩ şarkıyı atladı",
-    "pauseSong": "<@{author}> ⏸ müziği durdurdu.",
-    "resumeSong": "<@{author}> ▶ müziği yeniden oynattı!",
-    "unmutedSong": "<@{author}> 🔊 şarkının sesini açtı!",
-    "mutedSong": "<@{author}> 🔇 şarkıyı susturdu!",
-    "decreasedVolume": "<@{author}> 🔉 sesi azalttı ses seviyesi {volume}%",
-    "increasedVolume": "<@{author}> 🔊 sesi artırdı ses seviyesi {volume}%",
-    "loopSong": "<@{author}> Döngü şuan {loop}",
-    "stopSong": "<@{author}> ⏹ müziği durdurdu!",
+    "skipSong": "⏩ şarkıyı atladı",
+    "pauseSong": "⏸ müziği durdurdu.",
+    "resumeSong": "▶ müziği yeniden oynattı!",
+    "unmutedSong": "🔊 şarkının sesini açtı!",
+    "mutedSong": "🔇 şarkıyı susturdu!",
+    "decreasedVolume": "🔉 sesi azalttı ses seviyesi {volume}%",
+    "increasedVolume": "🔊 sesi artırdı ses seviyesi {volume}%",
+    "loopSong": "Döngü şuan {loop}",
+    "stopSong": "⏹ müziği durdurdu!",
     "leaveChannel": "Sesli kanaldan çıkıyor...",
     "songNotFound": "Audio Not Found",
     "songAccessErr": "Video is age restricted, private or unavailable"
@@ -84,7 +83,7 @@
     "errorNotFoundPlaylist": "Çalma listesi bulunamadı :(",
     "fetchingPlaylist": "⌛ Oynatma listesi getiriliyor...",
     "playlistCharLimit": "\nOynatma listesi karakter sınırından büyük...",
-    "startedPlaylist": "<@{author}> çalma listesini açtı",
+    "startedPlaylist": "çalma listesini açtı",
     "cantJoinChannel": "Kanala katılamadı: {error}"
   },
   "pruning": {
@@ -104,12 +103,12 @@
     "description": "Şarkı listeden kaldırıldı",
     "errorNotQueue": "Bir liste yok.",
     "usageReply": "Kullanım: {prefix}kaldır <Liste numarası>",
-    "result": "<@{author}> ❌ listeden kaldırdı **{title}**"
+    "result": "❌ listeden kaldırdı **{title}**"
   },
   "resume": {
     "description": "Şarkıyı devam ettir",
     "errorNotQueue": "Hiçbir şey çalınmıyor.",
-    "resultNotPlaying": "<@{author}> ▶ şarkıyı devam ettirdi!",
+    "resultNotPlaying": "▶ şarkıyı devam ettirdi!",
     "errorPlaying": "Liste durdurulmadı."
   },
   "search": {
@@ -123,24 +122,24 @@
   "shuffle": {
     "description": "Listeyi karıştır",
     "errorNotQueue": "Bir liste yok.",
-    "result": "<@{author}> 🔀 listeyi karıştırdı"
+    "result": "🔀 listeyi karıştırdı"
   },
   "skip": {
     "description": "Çalan şarkıyı atla",
     "errorNotQueue": "Sırada başka şarkı olmadığından atlayamıyorum.",
-    "result": "<@{author}> ⏭ şarkıyı geçti"
+    "result": "⏭ şarkıyı geçti"
   },
   "skipto": {
     "description": "Seçili liste numarasına atla",
     "usageReply": "Kullanım: {prefix}{name} <Liste numarası>",
     "errorNotQueue": "Bir liste yok.",
     "errorNotValid": "Listede sadece {length} şarkı var!",
-    "result": "<@{author}> ⏭ şarkıyı {arg} atladı"
+    "result": "⏭ şarkıyı {arg} atladı"
   },
   "stop": {
     "description": "Şarkıyı durdurur",
     "errorNotQueue": "Şuan hiçbir şey çalınmıyor.",
-    "result": "<@{author}> ⏹ müziği durdurdu"
+    "result": "⏹ müziği durdurdu"
   },
   "uptime": {
     "description": "Ne kadar süredir online ",

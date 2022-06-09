@@ -10,8 +10,7 @@ export default {
     const queue = message.client.queue.get(message.guild.id);
 
     if (!queue || !queue.songs.length)
-      return message.reply(i18n.__("nowplaying.errorNotQueue")).catch(console.error);
-
+      return message.channel.send(i18n.__("nowplaying.errorNotQueue")).catch(console.error);
     const song = queue.songs[0];
     const seek = queue.resource.playbackDuration / 1000;
     const left = song.duration - seek;

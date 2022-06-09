@@ -31,7 +31,7 @@
     "description": "Troca a música de posição na playlist.",
     "errorNotQueue": "Não há playlist.",
     "usagesReply": "Uso: {prefix}move <Posição na playlist>",
-    "result": "<@{author}> 🚚 moveu **{title}** para {index} na playlist."
+    "result": "🚚 moveu **{title}** para {index} na playlist."
   },
   "nowplaying": {
     "description": "Mostra música em reprodução.",
@@ -43,7 +43,7 @@
   "pause": {
     "description": "Pausa a música reproduzindo.",
     "errorNotQueue": "Não há nada reproduzindo.",
-    "result": "<@{author}> ⏸ pausou a música."
+    "result": "⏸ pausou a música."
   },
   "ping": {
     "description": "Mostra o ping médio do bot.",
@@ -56,20 +56,19 @@
     "usageReply": "Uso: {prefix}play <URL do Youtube | Nome do Vídeo | URL do Soundcloud>",
     "missingPermissionConnect": "Não posso conectar a canais de voz, falta permissão!",
     "missingPermissionSpeak": "Não posso tocar neste canal de voz, falta permissão!",
-    "queueAdded": "✅ **{title}** foi adicionado na playlist por <@{author}>",
+    "queueAdded": "✅ **{title}** (<{url}>) foi adicionado na playlist por {author}",
     "cantJoinChannel": "Não pude entrar no canal: {error}",
     "queueEnded": "❌ Fim da playlist.",
     "queueError": "Erro: {error}",
-    "startedPlaying": "🎶 Tocando: **{title}** {url}",
-    "skipSong": "<@{author}> ⏩ pulou a música.",
-    "pauseSong": "<@{author}> ⏸ pausou a música.",
-    "resumeSong": "<@{author}> ▶ resumiu a música!",
-    "unmutedSong": "<@{author}> 🔊 desmutou a música!",
-    "mutedSong": "<@{author}> 🔇 mutou a música!",
-    "decreasedVolume": "<@{author}> 🔉 baixou o volume, o volume agora é {volume}%",
-    "increasedVolume": "<@{author}> 🔊 aumentou o volume, o volume agora é {volume}%",
-    "loopSong": "<@{author}> Repetir está {loop}",
-    "stopSong": "<@{author}> ⏹ parou a música!",
+    "skipSong": "⏩ pulou a música.",
+    "pauseSong": "⏸ pausou a música.",
+    "resumeSong": "▶ resumiu a música!",
+    "unmutedSong": "🔊 desmutou a música!",
+    "mutedSong": "🔇 mutou a música!",
+    "decreasedVolume": "🔉 baixou o volume, o volume agora é {volume}%",
+    "increasedVolume": "🔊 aumentou o volume, o volume agora é {volume}%",
+    "loopSong": "Repetir está {loop}",
+    "stopSong": "⏹ parou a música!",
     "leaveChannel": "Deixando o canal de voz!",
     "songNotFound": "Audio Not Found",
     "songAccessErr": "Video is age restricted, private or unavailable"
@@ -84,7 +83,7 @@
     "errorNotFoundPlaylist": "Playlist não encontrada :(",
     "fetchingPlaylist": "⌛ importando playlist...",
     "playlistCharLimit": "\nPlaylist maior que o permitido...",
-    "startedPlaylist": "<@{author}> reproduzindo uma playlist.",
+    "startedPlaylist": "reproduzindo uma playlist.",
     "cantJoinChannel": "Não pude entrar no canal: {error}"
   },
   "pruning": {
@@ -104,12 +103,12 @@
     "description": "Remove música da playlist",
     "errorNotQueue": "Não há playlist.",
     "usageReply": "Uso: {prefix}remove <Número da música>",
-    "result": "<@{author}> ❌ removido **{title}** da playlist."
+    "result": "❌ removido **{title}** da playlist."
   },
   "resume": {
     "description": "Reproduz novamente a música pausada.",
     "errorNotQueue": "Não há nada reproduzindo.",
-    "resultNotPlaying": "<@{author}> ▶ resumiu a música!",
+    "resultNotPlaying": "▶ resumiu a música!",
     "errorPlaying": "A playlist não está pausada."
   },
   "search": {
@@ -123,24 +122,24 @@
   "shuffle": {
     "description": "Ativa o modo aleatório",
     "errorNotQueue": "Não há nada na playlist.",
-    "result": "<@{author}> 🔀 colocou a playlist no aleatório."
+    "result": "🔀 colocou a playlist no aleatório."
   },
   "skip": {
     "description": "Pula a música atual.",
     "errorNotQueue": "Não há nada tocando que eu possa pular.",
-    "result": "<@{author}> ⏭ pulou a música"
+    "result": "⏭ pulou a música"
   },
   "skipto": {
     "description": "Pula para uma determinada posição na fila.",
     "usageReply": "Uso: {prefix}{name} <Número da playlist>",
     "errorNotQueue": "Não há nada na playlist.",
     "errorNotValid": "A playlist tem {length} música apenas!",
-    "result": "<@{author}> ⏭ pulou para música {arg}"
+    "result": "⏭ pulou para música {arg}"
   },
   "stop": {
     "description": "Para a música.",
     "errorNotQueue": "Não há nada reproduzindo.",
-    "result": "<@{author}> ⏹ parou a música!"
+    "result": "⏹ parou a música!"
   },
   "uptime": {
     "description": "Verifica o tempo ativo",

@@ -7,8 +7,7 @@ export default {
   description: i18n.__("resume.description"),
   execute(message) {
     const queue = message.client.queue.get(message.guild.id);
-
-    if (!queue) return message.reply(i18n.__("resume.errorNotQueue")).catch(console.error);
+    if (!queue) return message.channel.send(i18n.__("resume.errorNotQueue")).catch(console.error);
     if (!canModifyQueue(message.member)) return i18n.__("common.errorNotChannel");
 
     if (queue.player.unpause()) {
@@ -19,7 +18,7 @@ export default {
       return true;
     }
 
-    message.reply(i18n.__("resume.errorPlaying")).catch(console.error);
+    message.channel.send(i18n.__("resume.errorPlaying")).catch(console.error);
     return false;
   }
 };

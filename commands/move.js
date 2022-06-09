@@ -12,10 +12,9 @@ export default {
     if (!queue) return message.reply(i18n.__("move.errorNotQueue")).catch(console.error);
     if (!canModifyQueue(message.member)) return;
 
-    if (!args.length) return message.reply(i18n.__mf("move.usagesReply", { prefix: message.client.prefix }));
-
+    if (!args.length) return message.channel.send(i18n.__mf("move.usagesReply", { prefix: message.client.prefix }));
     if (isNaN(args[0]) || args[0] <= 1)
-      return message.reply(i18n.__mf("move.usagesReply", { prefix: message.client.prefix }));
+      return message.channel.send(i18n.__mf("move.usagesReply", { prefix: message.client.prefix }));
 
     let song = queue.songs[args[0] - 1];
 
@@ -23,7 +22,7 @@ export default {
 
     queue.textChannel.send(
       i18n.__mf("move.result", {
-        author: message.author,
+        author: message.author.username,
         title: song.title,
         index: args[1] == 1 ? 1 : args[1]
       })

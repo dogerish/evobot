@@ -31,7 +31,7 @@
     "description": "Przenosi utwory w kolejce",
     "errorNotQueue": "Nie ma kolejki na tym serwerze.",
     "SkładniasReply": "Składnia: {prefix}move <Numer w kolejce>",
-    "result": "<@{author}> 🚚 przeniósł **{title}** na miejsce {index} w kolejce."
+    "result": "🚚 przeniósł **{title}** na miejsce {index} w kolejce."
   },
   "nowplaying": {
     "description": "Wyświetla aktualnie odtwarzany utwór",
@@ -43,7 +43,7 @@
   "pause": {
     "description": "Zatrzymaj aktualnie odtwarzaną muzykę",
     "errorNotQueue": "Nie ma aktywnej kolejki na tym serwerze.",
-    "result": "<@{author}> ⏸ zatrzymano odtwarzanie."
+    "result": "⏸ zatrzymano odtwarzanie."
   },
   "ping": {
     "description": "Pokazuje średni ping bot'a",
@@ -56,20 +56,19 @@
     "SkładniaReply": "Składnia: {prefix}play <YouTube URL | Nazwa Nagrania | Soundcloud URL>",
     "missingPermissionConnect": "Nie mogę połączyć się z tym kanałem, sprawdź uprawnienia!",
     "missingPermissionSpeak": "Nie mogę odtwarzać w tym kanale, sprawdź uprawnienia!",
-    "queueAdded": "✅ Utwór **{title}** został dodany do kolejki przez <@{author}>",
+    "queueAdded": "✅ Utwór **{title}** (<{url}>) został dodany do kolejki przez {author}",
     "cantJoinChannel": "Brak możliwości dołączenia na kanał: {error}",
     "queueEnded": "❌ Kolejka odtwarzania skończona.",
     "queueError": "Błąd: {error}",
-    "startedPlaying": "🎶 Rozpoczęto odtwarzanie: **{title}** {url}",
-    "skipSong": "<@{author}> ⏩ pominął",
-    "pauseSong": "<@{author}> ⏸ zatrzymał odtwarzanie.",
-    "resumeSong": "<@{author}> ▶ wznowił odtwarzanie!",
-    "unmutedSong": "<@{author}> 🔊 odciszył odtwarzanie!",
-    "mutedSong": "<@{author}> 🔇 wyciszył odtwarzanie!",
-    "decreasedVolume": "<@{author}> 🔉 podniósł poziom głośności, wynosi teraz: {volume}%",
-    "increasedVolume": "<@{author}> 🔊 podniósł poziom głośności, wynosi teraz: {volume}%",
-    "loopSong": "<@{author}> Przełączył pętlę na: {loop}",
-    "stopSong": "<@{author}> ⏹ Zatrzymał odtwarzanie!",
+    "skipSong": "⏩ pominął",
+    "pauseSong": "⏸ zatrzymał odtwarzanie.",
+    "resumeSong": "▶ wznowił odtwarzanie!",
+    "unmutedSong": "🔊 odciszył odtwarzanie!",
+    "mutedSong": "🔇 wyciszył odtwarzanie!",
+    "decreasedVolume": "🔉 podniósł poziom głośności, wynosi teraz: {volume}%",
+    "increasedVolume": "🔊 podniósł poziom głośności, wynosi teraz: {volume}%",
+    "loopSong": "Przełączył pętlę na: {loop}",
+    "stopSong": "⏹ Zatrzymał odtwarzanie!",
     "leaveChannel": "Opuszczanie kanału głosowego...",
     "songNotFound": "Utwór nieznaleziony.",
     "songAccessErr": "Film jest ograniczony wiekowo, prywatny lub niedostępny."
@@ -84,7 +83,7 @@
     "errorNotFoundPlaylist": "Lista odtwarzania nie znaleziona. :(",
     "fetchingPlaylist": "⌛ przetwarzanie listy odtwarzania...",
     "playlistCharLimit": "\nLista odtwarzania jest większa niż dozowlony limit znaków...",
-    "startedPlaylist": "<@{author}> Uruchomniono Listę odtwarzania",
+    "startedPlaylist": "Uruchomniono Listę odtwarzania",
     "cantJoinChannel": "Nie mogę dołączyć do kanału: {error}"
   },
   "pruning": {
@@ -104,12 +103,12 @@
     "description": "Usuń utwór z kolejki",
     "errorNotQueue": "Nie ma kolejki na tym serwerze.",
     "SkładniaReply": "Składnia: {prefix}remove <Numer w kolejce>",
-    "result": "<@{author}> ❌ usunięto **{title}** z kolejki."
+    "result": "❌ usunięto **{title}** z kolejki."
   },
   "resume": {
     "description": "Wznów odtwarzanie muzyki",
     "errorNotQueue": "Nie ma aktywnej kolejki na tym serwerze.",
-    "resultNotPlaying": "<@{author}> ▶ wznowił odtwarzanie!",
+    "resultNotPlaying": "▶ wznowił odtwarzanie!",
     "errorPlaying": "Kolejka nie jest zatrzymana."
   },
   "search": {
@@ -123,24 +122,24 @@
   "shuffle": {
     "description": "Pomieszaj kolejkę",
     "errorNotQueue": "Nie ma kolejki na tym serwerze.",
-    "result": "<@{author}> 🔀 pomieszaj kolejkę"
+    "result": "🔀 pomieszaj kolejkę"
   },
   "skip": {
     "description": "Przewiń aktualnie odtwarzany utwór",
     "errorNotQueue": "Nie mam czego pominąć.",
-    "result": "<@{author}> ⏭ pominął utwór"
+    "result": "⏭ pominął utwór"
   },
   "skipto": {
     "description": "Przewiń do wybranego numeru w kolejce",
     "SkładniaReply": "Składnia: {prefix}{name} <Numer w kolejce>",
     "errorNotQueue": "Nie ma kolejki na tym serwerze.",
     "errorNotValid": "Kolejka ma tylko {length} utworów!",
-    "result": "<@{author}> ⏭ pominął {arg} utowórw"
+    "result": "⏭ pominął {arg} utowórw"
   },
   "stop": {
     "description": "Zatrzymuje muzykę",
     "errorNotQueue": "Nic nie jest odtwarzane.",
-    "result": "<@{author}> ⏹ Zatrzymano odtwarzanie!"
+    "result": "⏹ Zatrzymano odtwarzanie!"
   },
   "uptime": {
     "description": "Sprawdź czas online bot'a",

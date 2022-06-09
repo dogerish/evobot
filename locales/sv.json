@@ -31,7 +31,7 @@
     "description": "Flytta låtar i kön",
     "errorNotQueue": "Det finns inget i kön.",
     "usagesReply": "Användning: {prefix} flytta <Könummer>",
-    "result": "<@{author}> 🚚 flyttade **{title}** till {index} i kön."
+    "result": "🚚 flyttade **{title}** till {index} i kön."
   },
   "nowplaying": {
     "description": "Visa nu spelande låt",
@@ -43,7 +43,7 @@
   "pause": {
     "description": "Pausa den musik som för närvarande spelas",
     "errorNotQueue": "Det finns inget i kön.",
-    "result": "<@{author}> ⏸ pausade musiken."
+    "result": "⏸ pausade musiken."
   },
   "ping": {
     "description": "Visa botens genomsnittliga ping",
@@ -56,20 +56,19 @@
     "usageReply": "Användning: {prefix}spela <YouTube URL | Videonamn | Soundcloud URL>",
     "missingPermissionConnect": "Det går inte att ansluta till röstkanal, behörighet saknas",
     "missingPermissionSpeak": "Jag kan inte prata i den här röstkanalen, se till att jag har rätt behörighet!",
-    "queueAdded": "✅ ** {title} ** har lagts till i kön av <@{author}>",
+    "queueAdded": "✅ **{title}** (<{url}>) har lagts till i kön av {author}",
     "cantJoinChannel": "Det gick inte att gå med i kanalen: {error}",
     "queueEnded": "❌ Musikkön avslutades.",
     "queueError": "Error: {error}",
-    "startedPlaying": "🎶 Började spela: **{title}** {url}",
-    "skipSong": "<@{author}> ⏩ hoppade över låten",
-    "pauseSong": "<@{author}> ⏸ pausade musiken.",
-    "resumeSong": "<@{author}> ▶ återupptog musiken!",
-    "unmutedSong": "<@{author}> 🔊 tystnade på musiken!",
-    "mutedSong": "<@{author}> 🔇 stängde av musiken!",
-    "decreasedVolume": "<@{author}> 🔉 minskade volymen, volymen är nu {volume}%",
-    "increasedVolume": "<@{author}> 🔊 ökade volymen, volymen är nu {volume}%",
-    "loopSong": "<@{author}> Loop är nu {loop}",
-    "stopSong": "<@{author}> ⏹ stoppade musiken!",
+    "skipSong": "⏩ hoppade över låten",
+    "pauseSong": "⏸ pausade musiken.",
+    "resumeSong": "▶ återupptog musiken!",
+    "unmutedSong": "🔊 tystnade på musiken!",
+    "mutedSong": "🔇 stängde av musiken!",
+    "decreasedVolume": "🔉 minskade volymen, volymen är nu {volume}%",
+    "increasedVolume": "🔊 ökade volymen, volymen är nu {volume}%",
+    "loopSong": "Loop är nu {loop}",
+    "stopSong": "⏹ stoppade musiken!",
     "leaveChannel": "Lämna röstkanal...",
     "songNotFound": "Audio Not Found",
     "songAccessErr": "Video is age restricted, private or unavailable"
@@ -84,7 +83,7 @@
     "errorNotFoundPlaylist": "Spellistan hittades inte :(",
     "fetchingPlaylist": "⌛ hämtar spellistan...",
     "playlistCharLimit": "\nSpellista större än teckenbegränsning...",
-    "startedPlaylist": "<@{author}> Startade en spellista",
+    "startedPlaylist": "Startade en spellista",
     "cantJoinChannel": "Det gick inte att gå med i kanalen: {error}"
   },
   "pruning": {
@@ -104,12 +103,13 @@
     "description": "Ta bort låten från kön",
     "errorNotQueue": "Det finns inget i kön.",
     "usageReply": "Användning: {prefix}ta bort <Könummer>",
-    "result": "<@{author}>❌ **{title}** borttagen från kön."
+    "result": "{author}❌ **{title}** borttagen från kön.",
+    "result": "{author}❌ **{title}** borttagen från kön."
   },
   "resume": {
     "description": "Fortsätt spela musik",
     "errorNotQueue": "Det finns inget i kön.",
-    "resultNotPlaying": "<@{author}> ▶ återupptog musiken!",
+    "resultNotPlaying": "▶ återupptog musiken!",
     "errorPlaying": "Kön är inte pausad."
   },
   "search": {
@@ -123,24 +123,24 @@
   "shuffle": {
     "description": "Blanda kö",
     "errorNotQueue": "Det finns inget i kön.",
-    "result": "<@{author}> 🔀 blandade kön"
+    "result": "🔀 blandade kön"
   },
   "skip": {
     "description": "Hoppa över låten",
     "errorNotQueue": "Det finns inget som jag kan hoppa över för dig.",
-    "result": "<@{author}> ⏭ hoppade över låten"
+    "result": "⏭ hoppade över låten"
   },
   "skipto": {
     "description": "Hoppa till valt könummer",
     "usageReply": "Användande: {prefix}{name} <Queue Number>",
     "errorNotQueue": "Det finns inget i kön.",
     "errorNotValid": "Kön är bara {length} låtar lång!",
-    "result": "<@{author}> ⏭ hoppade över {arg} låtar"
+    "result": "⏭ hoppade över {arg} låtar"
   },
   "stop": {
     "description": "Stoppar musiken",
     "errorNotQueue": "Det finns inget i kön.",
-    "result": "<@{author}> ⏹ stoppade musiken!"
+    "result": "⏹ stoppade musiken!"
   },
   "uptime": {
     "description": "Kontrollera driftstiden",

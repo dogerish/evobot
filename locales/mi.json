@@ -31,7 +31,7 @@
     "description": "Mova rob woeod een ta tic",
     "errorNotQueue": "Bada tis no tic.",
     "usagesReply": "Hug: {prefix}move <Tic Nobam>",
-    "result": "<@{author}> 🚚 ono **{title}** da {index} een ta tic."
+    "result": "{author} 🚚 ono **{title}** da {index} een ta tic."
   },
   "nowplaying": {
     "description": "Ta daa prompo maenae amu",
@@ -43,7 +43,7 @@
   "pause": {
     "description": "Pause ta pryers maenae bocami",
     "errorNotQueue": "Bada tis secmop maenae.",
-    "result": "<@{author}> ⏸ paused ta bocami."
+    "result": "{author} ⏸ paused ta bocami."
   },
   "ping": {
     "description": "Ta daa ta bot's picmet ping",
@@ -56,20 +56,19 @@
     "usageReply": "Hug: {prefix}play <YouTube URL | Hit Nomba | Soundcloud URL>",
     "missingPermissionConnect": "Oeput ladami da vola fagtit, bidlev permissions",
     "missingPermissionSpeak": "Ka oeput dub een ba vola fagtit, haga udo Ka kaylay ta zagass permissions!",
-    "queueAdded": "✅ **{title}** hego bem koa da ta tic bey <@{author}>",
+    "queueAdded": "✅ **{title}** (<{url}>) hego bem koa da ta tic bey {author}",
     "cantJoinChannel": "Tup non nut ta fagtit: {error}",
     "queueEnded": "❌ Bocami tic moc.",
     "queueError": "Via: {error}",
-    "startedPlaying": "🎶 Capley maenae: **{title}** {url}",
-    "skipSong": "<@{author}> ⏩ skipped ta amug",
-    "pauseSong": "<@{author}> ⏸ paused ta bocami.",
-    "resumeSong": "<@{author}> ▶ rapson ta bocami!",
-    "unmutedSong": "<@{author}> 🔊 unmuted ta bocami!",
-    "mutedSong": "<@{author}> 🔇 muted ta bocami!",
-    "decreasedVolume": "<@{author}> 🔉 ohmraj ta nogarc, ta nogarc tis prompo {volume}%",
-    "increasedVolume": "<@{author}> 🔊 yagcru ta nogarc, ta nogarc tis prompo {volume}%",
-    "loopSong": "<@{author}> Wab tis prompo {loop}",
-    "stopSong": "<@{author}> ⏹ haka ta bocami!",
+    "skipSong": "{author} ⏩ skipped ta amug",
+    "pauseSong": "{author} ⏸ paused ta bocami.",
+    "resumeSong": "{author} ▶ rapson ta bocami!",
+    "unmutedSong": "{author} 🔊 unmuted ta bocami!",
+    "mutedSong": "{author} 🔇 muted ta bocami!",
+    "decreasedVolume": "{author} 🔉 ohmraj ta nogarc, ta nogarc tis prompo {volume}%",
+    "increasedVolume": "{author} 🔊 yagcru ta nogarc, ta nogarc tis prompo {volume}%",
+    "loopSong": "{author} Wab tis prompo {loop}",
+    "stopSong": "{author} ⏹ haka ta bocami!",
     "leaveChannel": "Etayin vola fagtit...",
     "songNotFound": "Sow Non Polo",
     "songAccessErr": "Hit tis shh hugrig, defoxy sif letbig"
@@ -84,7 +83,7 @@
     "errorNotFoundPlaylist": "Playlist non polo :(",
     "fetchingPlaylist": "⌛ fetching ta playlist...",
     "playlistCharLimit": "\nPlaylist ditho pan kinhoy cay...",
-    "startedPlaylist": "<@{author}> Capley a playlist",
+    "startedPlaylist": "{author} Capley a playlist",
     "cantJoinChannel": "Could non nut ta fagtit: {error}"
   },
   "pruning": {
@@ -104,12 +103,12 @@
     "description": "Absdot amu da ta tic",
     "errorNotQueue": "Bada tis no tic.",
     "usageReply": "Hug: {prefix}remove <Tic Nobam>",
-    "result": "<@{author}> ❌ oftsos **{title}** da ta tic."
+    "result": "{author} ❌ oftsos **{title}** da ta tic."
   },
   "resume": {
     "description": "Skatil pryers maenae bocami",
     "errorNotQueue": "Bada tis secmop maenae.",
-    "resultNotPlaying": "<@{author}> ▶ rapson ta bocami!",
+    "resultNotPlaying": "{author} ▶ rapson ta bocami!",
     "errorPlaying": "Ta tic tis non paused."
   },
   "search": {
@@ -123,24 +122,24 @@
   "shuffle": {
     "description": "Shuffle tic",
     "errorNotQueue": "Bada tis no tic.",
-    "result": "<@{author}> 🔀 shuffled ta tic"
+    "result": "{author} 🔀 shuffled ta tic"
   },
   "skip": {
     "description": "Skip ta pryers maenae amu",
     "errorNotQueue": "Bada tis secmop maenae pak Ka tup skip nunu to.",
-    "result": "<@{author}> ⏭ skipped ta amu"
+    "result": "{author} ⏭ skipped ta amu"
   },
   "skipto": {
     "description": "Skip da ta sirsei tic nobam",
     "usageReply": "Hug: {prefix}{name} <Tic Nobam>",
     "errorNotQueue": "Bada tis no tic.",
     "errorNotValid": "Ta tic tis solo {length} rob lugol!",
-    "result": "<@{author}> ⏭ skipped {arg} rob"
+    "result": "{author} ⏭ skipped {arg} rob"
   },
   "stop": {
     "description": "Buy ta bocami",
     "errorNotQueue": "Bada tis secmop maenae.",
-    "result": "<@{author}> ⏹ haka ta bocami!"
+    "result": "{author} ⏹ haka ta bocami!"
   },
   "uptime": {
     "description": "Bada ta uptime",

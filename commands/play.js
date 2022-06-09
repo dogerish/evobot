@@ -17,18 +17,18 @@ export default {
   async execute(message, args) {
     const { channel } = message.member.voice;
 
-    if (!channel) return message.reply(i18n.__("play.errorNotChannel")).catch(console.error);
+    if (!channel) return message.channel.send(i18n.__("play.errorNotChannel")).catch(console.error);
 
     const queue = message.client.queue.get(message.guild.id);
 
     if (queue && channel.id !== queue.channel.id)
       return message
-        .reply(i18n.__mf("play.errorNotInSameChannel", { user: message.client.user.username }))
+        .channel.send(i18n.__mf("play.errorNotInSameChannel", { user: message.client.user.username }))
         .catch(console.error);
 
     if (!args.length)
       return message
-        .reply(i18n.__mf("play.usageReply", { prefix: message.client.prefix }))
+        .channel.send(i18n.__mf("play.usageReply", { prefix: message.client.prefix }))
         .catch(console.error);
 
     const url = args[0];
@@ -44,26 +44,25 @@ export default {
           if (res.statusCode == "302") {
             return message.client.commands.get("play").execute(message, [res.headers.location]);
           } else {
-            return message.reply(i18n.__("play.songNotFound")).catch(console.error);
+            return message.channel.send(i18n.__("play.songNotFound")).catch(console.error);
           }
         });
       } catch (error) {
         console.error(error);
-        return message.reply(error.message).catch(console.error);
+        return message.channel.send(error.message).catch(console.error);
       }
-
-      return message.reply("Following url redirection...").catch(console.error);
+      return message.channel.send("Following url redirection...").catch(console.error);
     }
 
     const song = await getSong({ message, args });
 
-    if (!song) return message.reply(i18n.__("common.errorCommand")).catch(console.error);
+    if (!song) return message.channel.send(i18n.__("common.errorCommand")).catch(console.error);
 
     if (queue) {
       queue.songs.push(song);
 
       return message
-        .reply(i18n.__mf("play.queueAdded", { title: song.title, author: message.author }))
+        .channel.send(i18n.__mf("play.queueAdded", { title: song.title, author: message.author.username, url: song.url }))
         .catch(console.error);
     }
 

@@ -14,7 +14,7 @@ export default {
         clips.push(file.substring(0, file.length - 4));
       });
 
-      message.reply(`${clips.join(" ")}`).catch(console.error);
+      message.channel.send(`${clips.join(" ")}`).catch(console.error);
     });
   }
 };

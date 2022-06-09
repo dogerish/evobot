@@ -91,8 +91,6 @@ export async function startQueue({ message, channel }) {
      * Song ends
      */
     if (oldState.status !== AudioPlayerStatus.Idle && newState.status === AudioPlayerStatus.Idle) {
-      if (!queue.collector?.ended) queue.collector.stop();
-
       if (
         queue.processing ||
         queue.player.state.status !== AudioPlayerStatus.Idle ||
