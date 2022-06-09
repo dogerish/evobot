@@ -9,7 +9,7 @@ export default {
   execute(message, args) {
     const queue = message.client.queue.get(message.guild.id);
 
-    if (!queue) return message.reply(i18n.__("move.errorNotQueue")).catch(console.error);
+    if (!queue) return message.channel.send(i18n.__("move.errorNotQueue")).catch(console.error);
     if (!canModifyQueue(message.member)) return;
 
     if (!args.length) return message.channel.send(i18n.__mf("move.usagesReply", { prefix: message.client.prefix }));

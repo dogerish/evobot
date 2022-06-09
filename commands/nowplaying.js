@@ -38,6 +38,6 @@ export default {
       });
     }
 
-    return message.reply({ embeds: [nowPlaying] });
+    return message.channel.send({ embeds: [nowPlaying] });
   }
 };

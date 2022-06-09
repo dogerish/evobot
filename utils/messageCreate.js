@@ -35,7 +35,7 @@ export function messageCreate(client) {
 
       if (now < expirationTime) {
         const timeLeft = (expirationTime - now) / 1000;
-        return message.reply(
+        return message.channel.send(
           i18n.__mf("common.cooldownMessage", { time: timeLeft.toFixed(1), name: command.name })
         );
       }
@@ -51,9 +51,9 @@ export function messageCreate(client) {
       console.error(error);
 
       if (error.message.includes("permissions")) {
-        message.reply(error.toString()).catch(console.error);
+        // message.channel.send(error.toString()).catch(console.error);
       } else {
-        message.reply(i18n.__("common.errorCommand")).catch(console.error);
+        message.channel.send(i18n.__("common.errorCommand")).catch(console.error);
       }
     }
   });

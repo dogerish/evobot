@@ -21,11 +21,11 @@ export async function getPlaylist({ message, args }) {
       videos = playlist.videos.slice(0, MAX_PLAYLIST_SIZE - 1);
     } catch (error) {
       console.error(error);
-      return message.reply(i18n.__("playlist.errorNotFoundPlaylist")).catch(console.error);
+      return message.channel.send(i18n.__("playlist.errorNotFoundPlaylist")).catch(console.error);
     }
   } else if (scdl.isValidUrl(args[0])) {
     if (args[0].includes("/sets/")) {
-      message.reply(i18n.__("playlist.fetchingPlaylist"));
+      message.channel.send(i18n.__("playlist.fetchingPlaylist"));
 
       playlist = await scdl.getSetInfo(args[0]);
       videos = playlist.tracks.map((track) => ({
@@ -41,7 +41,7 @@ export async function getPlaylist({ message, args }) {
       videos = playlist.videos.slice(0, MAX_PLAYLIST_SIZE - 1);
     } catch (error) {
       console.error(error);
-      return message.reply(i18n.__("playlist.errorNotFoundPlaylist")).catch(console.error);
+      return message.channel.send(i18n.__("playlist.errorNotFoundPlaylist")).catch(console.error);
     }
   }
 

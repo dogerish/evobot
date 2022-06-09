@@ -7,7 +7,7 @@ export default {
   execute(message) {
     const queue = message.client.queue.get(message.guild.id);
 
-    if (!queue) return message.reply(i18n.__("shuffle.errorNotQueue")).catch(console.error);
+    if (!queue) return message.channel.send(i18n.__("shuffle.errorNotQueue")).catch(console.error);
     if (!canModifyQueue(message.member)) return i18n.__("common.errorNotChannel");
 
     let songs = queue.songs;

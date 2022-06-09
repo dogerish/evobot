@@ -17,7 +17,7 @@ export default {
   description: i18n.__("clip.description"),
   async execute(message, args) {
     const { channel } = message.member.voice;
-    if (!channel) return message.reply(i18n.__("clip.errorNotChannel")).catch(console.error);
+    if (!channel) return message.channel.send(i18n.__("clip.errorNotChannel")).catch(console.error);
 
     const queue = message.client.queue.get(message.guild.id);
     if (queue) return message.channel.send(i18n.__("clip.errorQueue"));
@@ -60,7 +60,7 @@ export default {
       queueConstruct.connection.subscribe(queueConstruct.player);
     } catch (error) {
       console.error(error.message);
-      return message.reply("error");
+      return message.channel.send("error");
     }
   }
 };

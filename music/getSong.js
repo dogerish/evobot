@@ -35,7 +35,7 @@ export async function getSong({ message, args }) {
       const result = await youtube.searchOne(search);
 
       if (!result) {
-        message.reply(i18n.__("play.songNotFound")).catch(console.error);
+        message.channel.send(i18n.__("play.songNotFound")).catch(console.error);
         return;
       }
 
@@ -49,9 +49,9 @@ export async function getSong({ message, args }) {
       console.error(error);
 
       if (error.message.includes("410")) {
-        return message.reply(i18n.__("play.songAccessErr")).catch(console.error);
+        return message.channel.send(i18n.__("play.songAccessErr")).catch(console.error);
       } else {
-        return message.reply(error.message).catch(console.error);
+        return message.channel.send(error.message).catch(console.error);
       }
     }
   }

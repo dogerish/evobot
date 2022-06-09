@@ -23,6 +23,6 @@ export default {
 
     helpEmbed.setTimestamp();
 
-    return message.reply({ embeds: [helpEmbed] }).catch(console.error);
+    return message.channel.send({ embeds: [helpEmbed] }).catch(console.error);
   }
 };

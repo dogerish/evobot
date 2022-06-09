@@ -9,12 +9,12 @@ export default {
   permissions: ["MANAGE_MESSAGES", "ADD_REACTIONS"],
   async execute(message) {
     const queue = message.client.queue.get(message.guild.id);
-    if (!queue || !queue.songs.length) return message.reply(i18n.__("queue.errorNotQueue"));
+    if (!queue || !queue.songs.length) return message.channel.send(i18n.__("queue.errorNotQueue"));
 
     let currentPage = 0;
     const embeds = generateQueueEmbed(message, queue.songs);
 
-    const queueEmbed = await message.reply({
+    const queueEmbed = await message.channel.send({
       content: `**${i18n.__mf("queue.currentPage")} ${currentPage + 1}/${embeds.length}**`,
       embeds: [embeds[currentPage]]
     });
@@ -25,7 +25,7 @@ export default {
       await queueEmbed.react("➡️");
     } catch (error) {
       console.error(error);
-      message.reply(error.message).catch(console.error);
+      message.channel.send(error.message).catch(console.error);
     }
 
     const filter = (reaction, user) =>
@@ -58,7 +58,7 @@ export default {
         await reaction.users.remove(message.author.id);
       } catch (error) {
         console.error(error);
-        return message.reply(error.message).catch(console.error);
+        return message.channel.send(error.message).catch(console.error);
       }
     });
   }

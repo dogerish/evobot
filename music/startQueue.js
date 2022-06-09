@@ -31,7 +31,7 @@ export async function startQueue({ message, channel }) {
     getVoiceConnection(channel.guild.id)?.destroy();
     message.client.queue.delete(message.guild.id);
 
-    return message.reply(i18n.__mf("play.cantJoinChannel", { error }));
+    return message.channel.send(i18n.__mf("play.cantJoinChannel", { error }));
   }
 
   queue.connection.on("error", console.warn);
