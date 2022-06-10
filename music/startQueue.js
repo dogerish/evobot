@@ -56,6 +56,7 @@ export async function startQueue({ message, channel }) {
        */
       queue.loop = false;
       queue.songs = [];
+      if (queue.collector && !queue.collector.ended) queue.collector.stop();
       queue.player.stop();
       message.client.queue.delete(message.guild.id);
     } else if (
