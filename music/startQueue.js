@@ -57,6 +57,7 @@ export async function startQueue({ message, channel }) {
       queue.loop = false;
       queue.songs = [];
       queue.player.stop();
+      message.client.queue.delete(message.guild.id);
     } else if (
       !queue.readyLock &&
       (newState.status === VoiceConnectionStatus.Connecting ||
