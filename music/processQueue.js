@@ -13,6 +13,7 @@ export async function processQueue(song, message) {
 
   if (!song) {
     setTimeout(function () {
+      if (message.client.queue.has(message.guild.id)) return; // player restarted
       queue.connection.destroy();
       queue.player.stop(true);
       !PRUNING && queue.textChannel.send(i18n.__("play.leaveChannel"));
