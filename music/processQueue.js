@@ -91,14 +91,13 @@ export async function processQueue(song, message) {
     if (!queue) return;
     const member = await message.guild.members.fetch(user);
 
+    reaction.users.remove(user).catch(() => null);
     switch (reaction.emoji.name) {
       case "⏭":
-        reaction.users.remove(user).catch(console.error);
         await message.client.commands.get("skip").execute(message);
         break;
 
       case "⏯":
-        reaction.users.remove(user).catch(console.error);
         if (queue.player.state.status == AudioPlayerStatus.Playing) {
           await message.client.commands.get("pause").execute(message);
         } else {
@@ -107,57 +106,49 @@ export async function processQueue(song, message) {
         break;
 
       case "🔇":
-        reaction.users.remove(user).catch(console.error);
         if (!canModifyQueue(member, queue)) return i18n.__("common.errorNotChannel");
         queue.muted = !queue.muted;
         if (queue.muted) {
           queue.resource.volume.setVolumeLogarithmic(0);
-          queue.textChannel.send(i18n.__mf("play.mutedSong", { author: user })).catch(console.error);
+          queue.textChannel.send(i18n.__mf("play.mutedSong", { author: user.username }))
+            .catch(console.error);
         } else {
           queue.resource.volume.setVolumeLogarithmic(queue.volume / 100);
-          queue.textChannel.send(i18n.__mf("play.unmutedSong", { author: user })).catch(console.error);
+          queue.textChannel.send(i18n.__mf("play.unmutedSong", { author: user.username }))
+            .catch(console.error);
         }
         break;
 
       case "🔉":
-        reaction.users.remove(user).catch(console.error);
         if (queue.volume == 0) return;
         if (!canModifyQueue(member, queue)) return i18n.__("common.errorNotChannel");
         queue.volume = Math.max(queue.volume - 10, 0);
         queue.resource.volume.setVolumeLogarithmic(queue.volume / 100);
         queue.textChannel
-          .send(i18n.__mf("play.decreasedVolume", { author: user, volume: queue.volume }))
+          .send(i18n.__mf("play.decreasedVolume", { author: user.username, volume: queue.volume }))
           .catch(console.error);
         break;
 
       case "🔊":
-        reaction.users.remove(user).catch(console.error);
         if (queue.volume == 100) return;
         if (!canModifyQueue(member, queue)) return i18n.__("common.errorNotChannel");
         queue.volume = Math.min(queue.volume + 10, 100);
         queue.resource.volume.setVolumeLogarithmic(queue.volume / 100);
         queue.textChannel
-          .send(i18n.__mf("play.increasedVolume", { author: user, volume: queue.volume }))
+          .send(i18n.__mf("play.increasedVolume", { author: user.username, volume: queue.volume }))
           .catch(console.error);
         break;
 
       case "🔁":
-        reaction.users.remove(user).catch(console.error);
         await message.client.commands.get("loop").execute(message);
         break;
 
       case "🔀":
-        reaction.users.remove(user).catch(console.error);
         await message.client.commands.get("shuffle").execute(message);
         break;
 
       case "⏹":
-        reaction.users.remove(user).catch(console.error);
         await message.client.commands.get("stop").execute(message);
-        break;
-
-      default:
-        reaction.users.remove(user).catch(console.error);
         break;
     }
   });

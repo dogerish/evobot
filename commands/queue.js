@@ -53,12 +53,11 @@ export default {
           }
         } else {
           collector.stop();
-          reaction.message.reactions.removeAll().catch(console.error);
+          reaction.message.reactions.removeAll().catch(() => null);
         }
-        await reaction.users.remove(message.author.id);
+        await reaction.users.remove(message.author.id).catch(() => null);
       } catch (error) {
         console.error(error);
-        return message.channel.send(error.message).catch(console.error);
       }
     });
   }
