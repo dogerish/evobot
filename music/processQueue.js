@@ -13,18 +13,22 @@ export async function processQueue(song, message) {
   var collector = queue.collector;
   // stop old queue collector
   if (collector && !collector.ended) collector.stop();
+  if (queue.killer) {
+    clearTimeout(queue.killer);
+    queue.killer = undefined;
+  }
 
   if (!song) {
-    setTimeout(function () {
-      if (message.client.queue.has(message.guild.id)) return; // player restarted
+    queue.killer = setTimeout(function () {
       queue.connection.destroy();
       queue.player.stop(true);
+      message.client.queue.delete(message.guild.id);
       !PRUNING && queue.textChannel.send(i18n.__("play.leaveChannel"));
     }, STAY_TIME * 1000);
 
     !PRUNING && queue.textChannel.send(i18n.__("play.queueEnded")).catch(console.error);
 
-    return message.client.queue.delete(message.guild.id);
+    return;
   }
 
   let stream = null;

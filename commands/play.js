@@ -2,6 +2,7 @@ import https from "https";
 import SoundCloud from "soundcloud-downloader";
 import { getSong } from "../music/getSong.js";
 import { startQueue } from "../music/startQueue.js";
+import { processQueue } from "../music/processQueue.js";
 import { i18n } from "../utils/i18n.js";
 import { mobileScRegex, playlistPattern, videoPattern } from "../utils/patterns.js";
 import { generateQueue } from "../utils/queue.js";
@@ -58,20 +59,24 @@ export default {
 
     if (!song) return message.channel.send(i18n.__("common.errorCommand")).catch(console.error);
 
-    if (queue) {
-      queue.songs.push(song);
+    // no queue exists, make one
+    if (!queue) {
+      const queueConstruct = generateQueue(message.channel, channel);
+      queueConstruct.songs.push(song);
 
-      return message
-        .channel.send(i18n.__mf("play.queueAdded", { title: song.title, author: message.author.username, url: song.url }))
-        .catch(console.error);
+      message.client.queue.set(message.guild.id, queueConstruct);
+
+      startQueue({ message, channel });
+    }
+    // queue exists
+    else {
+      queue.songs.push(song);
+      // call processQueue if it was empty
+      if (queue.songs.length == 1) processQueue(song, message);
     }
 
-    const queueConstruct = generateQueue(message.channel, channel);
-    queueConstruct.songs.push(song);
-    message.channel.send(i18n.__mf("play.queueAdded", { title: song.title, author: message.author.username, url: song.url })).catch(console.error);
-
-    message.client.queue.set(message.guild.id, queueConstruct);
-
-    startQueue({ message, channel });
+    return message.channel.send(i18n.__mf("play.queueAdded", { title:
+      song.title, author: message.author.username, url: song.url
+    })).catch(console.error);
   }
 };
