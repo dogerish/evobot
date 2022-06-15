@@ -27,6 +27,7 @@ export default {
         .catch(console.error);
 
     const { playlist, videos } = await getPlaylist({ message, args });
+    if (!videos) return; // failed to get playlist
 
     if (queue) {
       queue.songs.push(...videos);
