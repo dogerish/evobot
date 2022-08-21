@@ -15,7 +15,13 @@ export async function getSong({ message, args }) {
   let song = null;
 
   if (urlValid) {
-    songInfo = await ytdl.getInfo(url);
+    try { songInfo = await ytdl.getInfo(url); }
+    catch (e)
+    {
+      console.error(e);
+      message.channel.send(i18n.__("play.errorGetInfoFailed")).catch(console.error);
+      return;
+    }
 
     song = {
       title: songInfo.videoDetails.title,
@@ -39,7 +45,13 @@ export async function getSong({ message, args }) {
         return;
       }
 
-      songInfo = await ytdl.getInfo(`https://youtube.com/watch?v=${result.id}`);
+      try { songInfo = await ytdl.getInfo(`https://youtube.com/watch?v=${result.id}`); }
+      catch (e)
+      {
+        console.error(e);
+        message.channel.send(i18n.__("play.errorGetInfoFailed")).catch(console.error);
+        return;
+      }
       song = {
         title: songInfo.videoDetails.title,
         url: songInfo.videoDetails.video_url,
