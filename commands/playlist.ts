@@ -96,12 +96,12 @@ export default {
 
     if (interaction.replied)
       return interaction.editReply({
-        content: i18n.__mf("playlist.startedPlaylist", { author: interaction.user.id }),
+        content: i18n.__mf("playlist.startedPlaylist", { author: interaction.user.username }),
         embeds: [playlistEmbed]
       });
     interaction
       .reply({
-        content: i18n.__mf("playlist.startedPlaylist", { author: interaction.user.id }),
+        content: i18n.__mf("playlist.startedPlaylist", { author: interaction.user.username }),
         embeds: [playlistEmbed]
       })
       .catch(console.error);

@@ -37,7 +37,7 @@ export default {
 
     interaction.reply({
       content: i18n.__mf("move.result", {
-        author: interaction.user.id,
+        author: interaction.user.username,
         title: song.title,
         index: movetoArg == 1 ? 1 : movetoArg
       })

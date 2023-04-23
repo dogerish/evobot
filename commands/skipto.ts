@@ -45,7 +45,7 @@ export default {
     queue.player.stop();
 
     interaction
-      .reply({ content: i18n.__mf("skipto.result", { author: interaction.user.id, arg: playlistSlotArg - 1 }) })
+      .reply({ content: i18n.__mf("skipto.result", { author: interaction.user.username, arg: playlistSlotArg - 1 }) })
       .catch(console.error);
   }
 };

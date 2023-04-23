@@ -14,6 +14,6 @@ export default {
 
     queue.stop();
 
-    interaction.reply({ content: i18n.__mf("stop.result", { author: interaction.user.id }) }).catch(console.error);
+    interaction.reply({ content: i18n.__mf("stop.result", { author: interaction.user.username }) }).catch(console.error);
   }
 };

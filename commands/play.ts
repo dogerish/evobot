@@ -79,7 +79,7 @@ export default {
       queue.enqueue(song);
 
       return (interaction.channel as TextChannel)
-        .send({ content: i18n.__mf("play.queueAdded", { title: song.title, author: interaction.user.id }) })
+        .send({ content: i18n.__mf("play.queueAdded", { title: song.title, author: interaction.user.username }) })
         .catch(console.error);
     }
 
