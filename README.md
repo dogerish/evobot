@@ -6,12 +6,13 @@
 
 # 🤖 EvoBot (Discord Music Bot)
 
-> EvoBot is a Discord Music Bot built with discord.js & uses Command Handler from [discordjs.guide](https://discordjs.guide)
+> EvoBot is a Discord Music Bot built with TypeScript, discord.js & uses Command Handler from [discordjs.guide](https://discordjs.guide)
 
 ## Requirements
 
-1. Discord Bot Token **[Guide](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)**
-2. Node.js 16.9 or newer
+1. Discord Bot Token **[Guide](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)**  
+   1.1. Enable 'Message Content Intent' in Discord Developer Portal
+2. Node.js 16.11.0 or newer
 
 ## 🚀 Getting Started
 
@@ -21,7 +22,7 @@ cd evobot
 npm install
 ```
 
-After installation finishes follow configuration instructions then run `node index.js` to start the bot.
+After installation finishes follow configuration instructions then run `npm run start` to start the bot.
 
 ## ⚙️ Configuration
 
@@ -33,7 +34,6 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
 {
   "TOKEN": "",
   "MAX_PLAYLIST_SIZE": 10,
-  "PREFIX": "/",
   "PRUNING": false,
   "LOCALE": "en",
   "DEFAULT_VOLUME": 100,
@@ -51,8 +51,6 @@ docker run -e "TOKEN=<discord-token>" eritislami/evobot
 
 ## 📝 Features & Commands
 
-> Note: The default prefix is '/'
-
 - 🎶 Play music from YouTube via url
 
 `/play https://www.youtube.com/watch?v=GLvohMXgcBo`
@@ -61,17 +59,9 @@ docker run -e "TOKEN=<discord-token>" eritislami/evobot
 
 `/play under the bridge red hot chili peppers`
 
-- 🎶 Play music from Soundcloud via url
-
-`/play https://soundcloud.com/blackhorsebrigade/pearl-jam-alive`
-
 - 🔎 Search and select music to play
 
 `/search Pearl Jam`
-
-Reply with song number or numbers seperated by comma that you wish to play
-
-Examples: `1` or `1,2,3`
 
 - 📃 Play youtube playlists via url
 
@@ -82,27 +72,25 @@ Examples: `1` or `1,2,3`
 `/playlist linkin park meteora`
 
 - Now Playing (/np)
-- Queue system (/queue, /q)
+- Queue system (/queue)
 - Loop / Repeat (/loop)
 - Shuffle (/shuffle)
-- Volume control (/volume, /v)
-- Lyrics (/lyrics, /ly)
+- Volume control (/volume)
+- Lyrics (/lyrics)
 - Pause (/pause)
-- Resume (/resume, /r)
-- Skip (/skip, /s)
-- Skip to song # in queue (/skipto, /st)
-- Move a song in the queue (/move, /mv)
-- Remove song # from queue (/remove, /rm)
-- Play an mp3 clip (/clip song.mp3) (put the file in sounds folder)
-- List all clips (/clips)
+- Resume (/resume)
+- Skip (/skip)
+- Skip to song # in queue (/skipto)
+- Move a song in the queue (/move)
+- Remove song # from queue (/remove)
 - Show ping to Discord API (/ping)
 - Show bot uptime (/uptime)
 - Toggle pruning of bot messages (/pruning)
-- Help (/help, /h)
+- Help (/help)
 - Command Handler from [discordjs.guide](https://discordjs.guide/)
 - Media Controls via Reactions
 
-![reactions](https://i.imgur.com/9S7Omf9.png)
+![reactions](https://i.imgur.com/0hdUX1C.png)
 
 ## 🌎 Locales
 
@@ -145,7 +133,3 @@ Currently available locales are:
 5. Commit your changes: `cz` OR `npm run commit` do not use `git commit`
 6. Push to the branch: `git push origin my-new-feature`
 7. Submit a pull request
-
-## 📝 Credits
-
-[@iCrawl](https://github.com/iCrawl) For the queue system used in this application which was adapted from [@iCrawl/discord-music-bot](https://github.com/iCrawl/discord-music-bot)
